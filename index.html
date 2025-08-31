@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTube Explained - Financial & Career Insights</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                overflow-x: hidden;
+                background: linear-gradient(135deg, #0A0A10 0%, #1a1a2e 50%, #0A0A10 100%);
+            }
+
+            .viewport {
+                min-height: 100vh;
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 2rem;
+                position: relative;
+            }
+
+            .gradient-text {
+                background: linear-gradient(90deg, #00F5D4, #9B5DE5, #F94144);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .glow-card {
+                background-color: rgba(27, 38, 59, 0.5);
+                border: 1px solid rgba(0, 245, 212, 0.2);
+                box-shadow: 0 0 15px rgba(0, 245, 212, 0.1), 0 0 30px rgba(0, 245, 212, 0.05);
+                backdrop-filter: blur(10px);
+            }
+
+            .topic-card {
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .topic-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 245, 212, 0.2);
+            }
+
+            .topic-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(0, 245, 212, 0.1), transparent);
+                transition: left 0.5s;
+            }
+
+            .topic-card:hover::before {
+                left: 100%;
+            }
+
+            .scroll-down-indicator {
+                position: absolute;
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translate(-50%, 0);
+                }
+
+                40% {
+                    transform: translate(-50%, -20px);
+                }
+
+                60% {
+                    transform: translate(-50%, -10px);
+                }
+            }
+
+            @media (min-width: 768px) {
+                .viewport {
+                    height: 100vh;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-[#0A0A10] text-gray-200">
+
+        <!-- Hero Section -->
+        <section id="hero" class="viewport">
+            <div data-aos="fade-up">
+                <h1 class="text-4xl md:text-7xl font-black tracking-tight leading-tight mb-4">
+                    YouTube <span class="gradient-text">Explained</span>
+                </h1>
+                <p class="text-xl md:text-2xl font-semibold text-gray-400 mb-6">Financial Freedom & Career Insights</p>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mb-12">
+                    Discover practical strategies, market insights, and career realities to help you make informed
+                    decisions about your money and professional growth.
+                </p>
+            </div>
+            <div class="scroll-down-indicator text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Topics Section -->
+        <section id="topics" class="viewport">
+            <div class="w-full max-w-6xl">
+                <div data-aos="fade-up">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Explore Topics</h2>
+                    <p class="text-gray-400 text-lg md:text-xl mb-12">Click on any topic below to dive deep into the
+                        explanation</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Home Loan Hack -->
+                    <a href="10-year-homeloan/index.html"
+                        class="topic-card glow-card p-6 md:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="100">
+                            <div class="text-5xl mb-4">🏠</div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-[#00F5D4] transition-colors">
+                                Home Loan Hack</h3>
+                            <p class="text-gray-400 text-sm md:text-base mb-4">How to finish your 25-year loan in just
+                                10 years and save ₹42 lakhs in interest</p>
+                            <div class="flex items-center text-[#00F5D4] font-semibold">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- ETF vs Mutual Fund -->
+                    <a href="etf-mf/index.html" class="topic-card glow-card p-6 md:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-5xl mb-4">📊</div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-[#9B5DE5] transition-colors">
+                                ETF vs Mutual Fund</h3>
+                            <p class="text-gray-400 text-sm md:text-base mb-4">Complete comparison with costs, taxation,
+                                and which one is right for you in 2025</p>
+                            <div class="flex items-center text-[#9B5DE5] font-semibold">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- IT Sector Reality -->
+                    <a href="it-sector-reality/index.html"
+                        class="topic-card glow-card p-6 md:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <div class="text-5xl mb-4">💻</div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-[#F94144] transition-colors">
+                                IT Job Reality 2025</h3>
+                            <p class="text-gray-400 text-sm md:text-base mb-4">The harsh truth about IT jobs, salary
+                                stagnation, and skills that actually matter</p>
+                            <div class="flex items-center text-[#F94144] font-semibold">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="viewport">
+            <div class="w-full max-w-4xl">
+                <div class="glow-card p-8 md:p-12 rounded-xl" data-aos="zoom-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Why These Topics Matter</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#00F5D4]">🏠 Smart Financing</h3>
+                            <p class="text-gray-400 mb-6">Home loans shouldn't trap you for 25 years. Learn strategies
+                                to pay off your loan faster and save lakhs in interest payments.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#9B5DE5]">📊 Investment Choices</h3>
+                            <p class="text-gray-400 mb-6">With so many investment options, understanding ETFs vs Mutual
+                                Funds can make the difference between average and exceptional returns.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#F94144]">💼 Career Reality</h3>
+                            <p class="text-gray-400 mb-6">The IT industry is changing rapidly. Understand the current
+                                job market dynamics and which skills will secure your future.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-white">🎯 Take Action</h3>
+                            <p class="text-gray-400 mb-6">Knowledge is power, but only when you apply it. These insights
+                                are designed to help you make informed decisions about your financial future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <p class="text-gray-500 text-sm md:text-base">
+                    Built with ❤️ for financial literacy and career guidance
+                </p>
+                <p class="text-gray-600 text-xs mt-2">
+                    Click on any topic above to explore detailed explanations and strategies
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 200,
+            });
+
+            // Smooth scroll for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

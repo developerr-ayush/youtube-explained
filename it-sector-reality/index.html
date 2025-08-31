@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Harsh Reality of IT Jobs in India (2025)</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+            rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #0a0a0a;
+            }
+
+            .section {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 4rem 2rem;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                background: radial-gradient(ellipse at center, rgba(10, 10, 10, 1) 0%, rgba(0, 0, 0, 1) 70%);
+            }
+
+            .section::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%231a1a1a" fill-opacity="0.3"%3E%3Cpath d="M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+                opacity: 0.5;
+                z-index: -1;
+            }
+
+            .accent-text {
+                color: #39FF14;
+            }
+
+            .glow {
+                text-shadow: 0 0 10px #39FF14, 0 0 15px #39FF14, 0 0 20px #39FF14;
+            }
+
+            /* --- ANIMATIONS --- */
+            @keyframes draw-line {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            .draw-animation {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+            }
+
+            .draw-animation.animated {
+                animation: draw-line 2s 0.5s ease-out forwards;
+            }
+
+            @keyframes fade-in-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animated-item {
+                opacity: 0;
+            }
+
+            .animated-item.animated {
+                animation: fade-in-up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            }
+
+            /* Staggered delays */
+            .delay-1.animated {
+                animation-delay: 0.2s;
+            }
+
+            .delay-2.animated {
+                animation-delay: 0.4s;
+            }
+
+            .delay-3.animated {
+                animation-delay: 0.6s;
+            }
+
+            .delay-4.animated {
+                animation-delay: 0.8s;
+            }
+
+            @keyframes pulse-glow {
+
+                0%,
+                100% {
+                    fill: #39FF14;
+                    filter: drop-shadow(0 0 3px #39FF14);
+                }
+
+                50% {
+                    fill: #9eff8a;
+                    filter: drop-shadow(0 0 8px #39FF14);
+                }
+            }
+
+            .pulse-glow-animation.animated {
+                animation: pulse-glow 2s 2.5s ease-in-out infinite;
+            }
+
+            /* Mobile adjustments */
+            @media (max-width: 768px) {
+                .section {
+                    padding: 3rem 1rem;
+                    min-height: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-black text-white">
+
+        <!-- Section 1: The Hook -->
+        <section class="section">
+            <div class="w-full max-w-md mx-auto">
+                <h1 class="animated-item text-3xl md:text-5xl font-bold mb-8">A DM I get almost daily…</h1>
+                <div
+                    class="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-3xl p-6 space-y-4 shadow-2xl shadow-green-500/10">
+                    <div class="animated-item delay-1 flex justify-start">
+                        <p class="bg-gray-800 rounded-2xl rounded-bl-none p-3 max-w-[80%]">Sir mujhe job hi nahi mil
+                            rahi 😭</p>
+                    </div>
+                    <div class="animated-item delay-2 flex justify-start">
+                        <p class="bg-gray-800 rounded-2xl rounded-bl-none p-3 max-w-[80%]">Sir 2 saal se offer hai,
+                            onboarding nahi hua</p>
+                    </div>
+                    <div class="animated-item delay-3 flex justify-start">
+                        <p class="bg-gray-800 rounded-2xl rounded-bl-none p-3 max-w-[80%]">Sir mujhe iss saal bhi 0%
+                            hike mila</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Salary Stagnation -->
+        <section class="section">
+            <div class="w-full max-w-3xl mx-auto">
+                <h1 class="animated-item text-3xl md:text-5xl font-bold mb-4">Freshers' salary has been frozen for a
+                    decade.</h1>
+                <p class="animated-item delay-1 text-gray-400 mb-12">In 2025, your starting salary's value is shrinking
+                    fast.</p>
+                <div class="animated-item delay-2 relative bg-gray-900/30 border border-gray-800 p-6 rounded-xl">
+                    <!-- Chart SVG -->
+                    <svg viewBox="0 0 400 200" class="w-full h-auto">
+                        <!-- Grid lines -->
+                        <line x1="30" y1="150" x2="370" y2="150" stroke="#4A5568" stroke-width="1" />
+                        <line x1="30" y1="100" x2="370" y2="100" stroke="#2D3748" stroke-width="1"
+                            stroke-dasharray="2" />
+                        <line x1="30" y1="50" x2="370" y2="50" stroke="#2D3748" stroke-width="1" stroke-dasharray="2" />
+
+                        <!-- Axis Labels -->
+                        <text x="15" y="155" fill="#718096" font-size="8">0 LPA</text>
+                        <text x="15" y="55" fill="#718096" font-size="8">7 LPA</text>
+
+                        <!-- Flat Salary Line -->
+                        <line x1="50" y1="130" x2="350" y2="130" stroke="white" stroke-width="3" />
+
+                        <!-- Rising Inflation Line -->
+                        <path d="M 50 130 C 150 120, 250 40, 350 30" stroke="#39FF14" stroke-width="4" fill="none"
+                            class="draw-animation" />
+
+                        <!-- 2014 Data -->
+                        <text x="50" y="170" fill="white" font-size="12" font-weight="bold"
+                            text-anchor="middle">2014</text>
+                        <text x="50" y="115" fill="white" font-size="12" font-weight="bold" text-anchor="middle">₹3.5
+                            LPA</text>
+                        <circle cx="50" cy="130" r="4" fill="white" />
+
+                        <!-- 2025 Data -->
+                        <text x="350" y="170" fill="white" font-size="12" font-weight="bold"
+                            text-anchor="middle">2025</text>
+                        <text x="350" y="115" fill="white" font-size="12" font-weight="bold"
+                            text-anchor="middle">₹3.5-4.5 LPA</text>
+                        <circle cx="350" cy="130" r="4" fill="white" />
+
+                        <!-- Inflation Callout -->
+                        <circle cx="350" cy="30" r="5" class="pulse-glow-animation" />
+                        <text x="340" y="20" fill="#39FF14" font-size="12" font-weight="bold" text-anchor="end"
+                            class="glow">Needed Today:</text>
+                        <text x="340" y="35" fill="#39FF14" font-size="12" font-weight="bold" text-anchor="end"
+                            class="glow">₹6.5 LPA</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Job Scarcity -->
+        <section class="section">
+            <div class="w-full max-w-4xl mx-auto space-y-8">
+                <h1 class="animated-item text-3xl md:text-5xl font-bold">The placement dream is fading.</h1>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="animated-item delay-1 space-y-4">
+                        <h2
+                            class="text-2xl md:text-4xl font-bold border-2 border-dashed border-white/50 p-4 rounded-xl">
+                            Expectation 🎉</h2>
+                        <img src="https://placehold.co/600x400/000000/39FF14?text=Campus+Celebrations!"
+                            alt="Students celebrating their placements" class="rounded-lg shadow-lg">
+                    </div>
+                    <div class="animated-item delay-2 space-y-4">
+                        <h2
+                            class="text-2xl md:text-4xl font-bold border-2 border-dashed border-red-500/50 p-4 rounded-xl">
+                            Reality 😭</h2>
+                        <img src="https://placehold.co/600x400/000000/ff3914?text=Still+Waiting..."
+                            alt="A person waiting for a joining letter" class="rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center flex-wrap gap-4 text-center text-sm md:text-lg font-semibold mt-8">
+                <p
+                    class="animated-item delay-3 bg-gray-900/50 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-lg">
+                    Hiring down <span class="accent-text">70-80%</span></p>
+                <p
+                    class="animated-item delay-4 bg-gray-900/50 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-lg">
+                    Thousands waiting <span class="accent-text">2+ years</span></p>
+            </div>
+        </section>
+
+        <!-- Section 4: The Other IT World -->
+        <section class="section">
+            <h1 class="animated-item text-3xl md:text-5xl font-bold mb-12">But IT is <span
+                    class="accent-text glow">NOT</span> dead.</h1>
+            <div class="w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Old Skills -->
+                <div
+                    class="animated-item delay-1 bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700 space-y-6 transition-transform duration-300 hover:scale-105">
+                    <h2 class="text-3xl font-bold text-gray-400">Old Skills</h2>
+                    <div class="text-gray-500 text-lg">Java, C++, Manual Testing...</div>
+                    <div class="text-5xl font-extrabold text-gray-600">3-4 LPA</div>
+                </div>
+                <!-- New Skills -->
+                <div
+                    class="animated-item delay-2 bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-green-500/50 space-y-6 shadow-2xl shadow-green-500/20 transition-transform duration-300 hover:scale-105 hover:shadow-green-500/40">
+                    <h2 class="text-3xl font-bold accent-text">New Skills</h2>
+                    <div class="grid grid-cols-2 gap-4 text-lg font-semibold">
+                        <span class="flex items-center gap-2">🤖 AI/ML</span>
+                        <span class="flex items-center gap-2">☁️ Cloud Computing</span>
+                        <span class="flex items-center gap-2">🔐 Cybersecurity</span>
+                        <span class="flex items-center gap-2">📊 Data Science</span>
+                    </div>
+                    <div class="text-5xl font-extrabold accent-text glow">12-25 LPA</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Punchline / CTA -->
+        <section class="section">
+            <div class="text-center">
+                <h1 class="animated-item text-6xl md:text-9xl font-extrabold">SKILLS <span
+                        class="accent-text glow text-7xl md:text-[10rem]">></span> DEGREE</h1>
+                <p class="animated-item delay-1 text-2xl md:text-4xl font-semibold mt-12 mb-8">Stop chasing the crowd.
+                    Build high-value skills.</p>
+                <h2 class="animated-item delay-2 text-2xl md:text-3xl font-bold">Do you agree? Drop your thoughts 👇
+                </h2>
+            </div>
+        </section>
+
+        <script>
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '-50px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animated class to all animated items in this section
+                        const animatedItems = entry.target.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animated');
+                            }, index * 200); // Stagger animations
+                        });
+
+                        // Special handling for draw animations
+                        const drawAnimations = entry.target.querySelectorAll('.draw-animation');
+                        drawAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 1000);
+                        });
+
+                        // Special handling for pulse animations
+                        const pulseAnimations = entry.target.querySelectorAll('.pulse-glow-animation');
+                        pulseAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 2000);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Trigger first section animations on load
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const firstSection = document.querySelector('.section');
+                    if (firstSection) {
+                        const animatedItems = firstSection.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animated');
+                            }, index * 200);
+                        });
+
+                        const drawAnimations = firstSection.querySelectorAll('.draw-animation');
+                        drawAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 1000);
+                        });
+
+                        const pulseAnimations = firstSection.querySelectorAll('.pulse-glow-animation');
+                        pulseAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 2000);
+                        });
+                    }
+                }, 300);
+            });
+        </script>
+
+    </body>
+
+</html>
