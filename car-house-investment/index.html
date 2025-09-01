@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cars & Houses Aren't Investments - The Truth</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #0a0a0a;
+                color: #e5e7eb;
+            }
+
+            .scroll-container {
+                scroll-snap-type: y mandatory;
+                overflow-y: auto;
+                height: 100vh;
+                scroll-behavior: smooth;
+            }
+
+            .scroll-section {
+                scroll-snap-align: start;
+                min-height: 100vh;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.8s ease-out forwards;
+            }
+
+            .scroll-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .scroll-container {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            .accent-text {
+                color: #F94144;
+            }
+
+            .section {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 4rem 1rem;
+                text-align: center;
+                position: relative;
+            }
+
+            .accent-text {
+                color: #F94144;
+            }
+
+            /* --- ANIMATIONS --- */
+            @keyframes draw-line {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            .draw-animation {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+            }
+
+            .draw-animation.animated {
+                animation: draw-line 2s 0.5s ease-out forwards;
+            }
+
+            @keyframes fade-in-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animated-item {
+                opacity: 0;
+            }
+
+            .animated-item.animated {
+                animation: fade-in-up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            }
+
+            /* Staggered delays */
+            .delay-1.animated {
+                animation-delay: 0.2s;
+            }
+
+            .delay-2.animated {
+                animation-delay: 0.4s;
+            }
+
+            .delay-3.animated {
+                animation-delay: 0.6s;
+            }
+
+            .delay-4.animated {
+                animation-delay: 0.8s;
+            }
+
+            @keyframes pulse-glow {
+
+                0%,
+                100% {
+                    fill: #F94144;
+                    filter: drop-shadow(0 0 3px #F94144);
+                }
+
+                50% {
+                    fill: #ff6b6b;
+                    filter: drop-shadow(0 0 8px #F94144);
+                }
+            }
+
+            .pulse-glow-animation.animated {
+                animation: pulse-glow 2s 2.5s ease-in-out infinite;
+            }
+
+            /* Mobile adjustments */
+            @media (max-width: 768px) {
+                .section {
+                    padding: 3rem 1rem;
+                    min-height: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-black text-white">
+
+        <!-- Section 1: The Hook -->
+        <section class="section">
+            <div class="w-full max-w-4xl mx-auto">
+                <h1 class="animated-item text-4xl md:text-7xl font-bold mb-8">Cars & Houses Aren't Investments</h1>
+                <div class="animated-item delay-1 text-center">
+                    <div class="text-6xl mb-8">🚗🏠</div>
+                    <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                        "Buy a car, it's an investment. Buy a house, it's an asset."
+                        <br>
+                        <span class="text-gray-400">Everyone says this. But they're wrong.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Reality -->
+        <section class="section">
+            <div class="w-full max-w-5xl mx-auto">
+                <h1 class="animated-item text-4xl md:text-6xl font-bold mb-8">The Truth: They're Money Suckers</h1>
+                <div class="animated-item delay-1 grid md:grid-cols-2 gap-8">
+                    <!-- Car Reality -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-red-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-red-400">🚗 The Car Reality</h3>
+                            <ul class="text-left space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">📉</span>
+                                    Depreciates 15-20% first year
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">⛽</span>
+                                    Fuel, maintenance, insurance
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">🅿️</span>
+                                    Parking, tolls, breakdowns
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">💸</span>
+                                    Opportunity cost of capital
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- House Reality -->
+                    <div class="space-y-6">
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-orange-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-orange-400">🏠 The House Reality</h3>
+                            <ul class="text-left space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-orange-400">🏦</span>
+                                    EMI payments for 20+ years
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-orange-400">🔧</span>
+                                    Maintenance, repairs, taxes
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-orange-400">📍</span>
+                                    Illiquid - can't sell quickly
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-orange-400">📈</span>
+                                    Returns often below inflation
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Truth -->
+                <div class="animated-item delay-2 mt-12 bg-red-900/20 border border-red-500/30 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center glow">What They Really Are</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="text-center">
+                            <div class="text-5xl mb-4">🚗</div>
+                            <h4 class="text-xl font-bold mb-2">Car = Liability</h4>
+                            <p class="text-gray-300">Costs money every month, loses value, provides no income</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl mb-4">🏠</div>
+                            <h4 class="text-xl font-bold mb-2">Primary Home = Shelter</h4>
+                            <p class="text-gray-300">Provides utility, but often poor financial investment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Data/Graph -->
+        <section class="section">
+            <div class="w-full max-w-6xl mx-auto">
+                <h1 class="animated-item text-4xl md:text-6xl font-bold mb-8">The Numbers Don't Lie</h1>
+                <div class="animated-item delay-1 grid md:grid-cols-2 gap-8">
+                    <!-- Car Depreciation -->
+                    <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Car Depreciation Reality</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-gray-800/50 rounded-lg">
+                                <span class="text-lg">New Car ₹10L</span>
+                                <span class="text-xl font-bold text-green-400">₹10 Lakhs</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-red-900/30 border border-red-500/30 rounded-lg">
+                                <span class="text-lg">After 1 Year</span>
+                                <span class="text-xl font-bold text-red-400">₹7-8 Lakhs</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-red-900/30 border border-red-500/30 rounded-lg">
+                                <span class="text-lg">After 5 Years</span>
+                                <span class="text-xl font-bold text-red-400">₹3.5 Lakhs</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-red-900/30 border border-red-500/30 rounded-lg">
+                                <span class="text-lg">Total Loss</span>
+                                <span class="text-xl font-bold glow">₹65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- House vs Investment -->
+                    <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">House vs Investments</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-gray-800/50 rounded-lg">
+                                <span class="text-lg">House Buy ₹1Cr</span>
+                                <span class="text-xl font-bold text-orange-400">₹1 Crore</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-red-900/30 border border-red-500/30 rounded-lg">
+                                <span class="text-lg">EMI + Interest (20 yrs)</span>
+                                <span class="text-xl font-bold text-red-400">₹92 Lakhs</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-red-900/30 border border-red-500/30 rounded-lg">
+                                <span class="text-lg">Maintenance (20 yrs)</span>
+                                <span class="text-xl font-bold text-red-400">₹20 Lakhs</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-green-900/30 border border-green-500/30 rounded-lg">
+                                <span class="text-lg">Net Investment Return</span>
+                                <span class="text-xl font-bold text-green-400">4-5% CAGR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Chart -->
+                <div class="animated-item delay-2 mt-12 bg-gray-900/30 border border-gray-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Car vs House vs Investments</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-red-900/20 border border-red-500/30 rounded-lg">
+                            <div class="text-4xl mb-4">🚗</div>
+                            <h4 class="text-xl font-bold mb-2 text-red-400">Car</h4>
+                            <p class="text-2xl font-bold text-red-400 mb-2">-65% in 5 years</p>
+                            <p class="text-gray-400">Depreciation + Costs</p>
+                        </div>
+                        <div class="text-center p-6 bg-orange-900/20 border border-orange-500/30 rounded-lg">
+                            <div class="text-4xl mb-4">🏠</div>
+                            <h4 class="text-xl font-bold mb-2 text-orange-400">House</h4>
+                            <p class="text-2xl font-bold text-orange-400 mb-2">4-5% CAGR</p>
+                            <p class="text-gray-400">Below inflation</p>
+                        </div>
+                        <div class="text-center p-6 bg-green-900/20 border border-green-500/30 rounded-lg">
+                            <div class="text-4xl mb-4">📈</div>
+                            <h4 class="text-xl font-bold mb-2 text-green-400">Investments</h4>
+                            <p class="text-2xl font-bold text-green-400 mb-2">12% CAGR</p>
+                            <p class="text-gray-400">Beats inflation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Cost Example -->
+                <div class="animated-item delay-3 mt-12 bg-red-900/20 border border-red-500/30 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center glow">The Hidden Cost of "Investing" in a Car</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4 text-red-400">What You Think You Own</h4>
+                            <div class="space-y-3 text-left">
+                                <div class="flex justify-between p-2 bg-gray-800/50 rounded">
+                                    <span>Car Value</span>
+                                    <span class="text-green-400">₹10 Lakhs</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4 accent-text">What It Really Costs You</h4>
+                            <div class="space-y-3 text-left">
+                                <div class="flex justify-between p-2 bg-gray-800/50 rounded">
+                                    <span>Loan Interest (5 yrs)</span>
+                                    <span class="text-red-400">₹1.5 Lakhs</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-800/50 rounded">
+                                    <span>Fuel (5 yrs)</span>
+                                    <span class="text-red-400">₹3 Lakhs</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-gray-800/50 rounded">
+                                    <span>Insurance/Maintenance</span>
+                                    <span class="text-red-400">₹2 Lakhs</span>
+                                </div>
+                                <div class="flex justify-between p-2 bg-red-900/30 border border-red-500/30 rounded">
+                                    <span class="font-bold">Total Cost</span>
+                                    <span class="text-red-400 font-bold">₹16.5 Lakhs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <p class="text-xl font-bold glow">₹6.5 lakhs goes to costs, not asset value</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Takeaway -->
+        <section class="section">
+            <div class="text-center">
+                <h1 class="animated-item text-4xl md:text-7xl font-extrabold mb-8 glow">CAR = LIABILITY</h1>
+                <h2 class="animated-item delay-1 text-2xl md:text-4xl font-bold mb-8 accent-text">Primary home = shelter
+                    🏠</h2>
+                <h3 class="animated-item delay-2 text-xl md:text-3xl font-bold mb-8 text-green-400">Investments =
+                    income-generating assets 📈</h3>
+                <div class="animated-item delay-3 max-w-4xl mx-auto">
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                        Buy what you need, invest what grows your wealth.
+                        <br>
+                        Stop confusing consumption with investment.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-green-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-green-400">✅ Smart Approach</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• Buy used cars, save 30-40%</li>
+                                <li>• Live below means in smaller home</li>
+                                <li>• Invest 50% of income</li>
+                                <li>• Focus on income-generating assets</li>
+                                <li>• Calculate total ownership cost</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-red-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-red-400">❌ Wealth Destroyers</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• Financing depreciating assets</li>
+                                <li>• Keeping old cars "for investment"</li>
+                                <li>• Buying bigger home than needed</li>
+                                <li>• Not tracking ownership costs</li>
+                                <li>• Emotional buying decisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-12 bg-purple-900/20 border border-purple-500/30 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-4 glow">The Millionaire Mindset</h3>
+                        <p class="text-lg text-gray-300 mb-4">
+                            Millionaires drive <span class="text-green-400 font-bold">Toyota Corolla</span> and live in
+                            <span class="text-green-400 font-bold">3BHK flats</span>.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-4">
+                            Their wealth is in <span class="accent-text font-bold">stocks, bonds, businesses</span> -
+                            not depreciating toys.
+                        </p>
+                        <p class="text-xl font-bold glow">
+                            Buy assets that make you money, not cost you money.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '-50px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animated class to all animated items in this section
+                        const animatedItems = entry.target.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animated');
+                            }, index * 200); // Stagger animations
+                        });
+
+                        // Special handling for draw animations
+                        const drawAnimations = entry.target.querySelectorAll('.draw-animation');
+                        drawAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 1000);
+                        });
+
+                        // Special handling for pulse animations
+                        const pulseAnimations = entry.target.querySelectorAll('.pulse-glow-animation');
+                        pulseAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 2000);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Trigger first section animations on load
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const firstSection = document.querySelector('.section');
+                    if (firstSection) {
+                        const animatedItems = firstSection.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animated');
+                            }, index * 200);
+                        });
+
+                        const drawAnimations = firstSection.querySelectorAll('.draw-animation');
+                        drawAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 1000);
+                        });
+
+                        const pulseAnimations = firstSection.querySelectorAll('.pulse-glow-animation');
+                        pulseAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 2000);
+                        });
+                    }
+                }, 300);
+            });
+        </script>
+
+    </body>
+
+</html>

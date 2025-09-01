@@ -18,19 +18,19 @@
 
             body {
                 font-family: 'Inter', sans-serif;
-                overflow-x: hidden;
-                background: linear-gradient(135deg, #0A0A10 0%, #1a1a2e 50%, #0A0A10 100%);
+                background: #0A0A10;
+                color: #e5e7eb;
             }
 
             .viewport {
                 min-height: 100vh;
-                width: 100vw;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 2rem;
+                padding: 2rem 1rem;
                 position: relative;
             }
 
@@ -38,39 +38,23 @@
                 background: linear-gradient(90deg, #00F5D4, #9B5DE5, #F94144);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                background-clip: text;
             }
 
             .glow-card {
-                background-color: rgba(27, 38, 59, 0.5);
-                border: 1px solid rgba(0, 245, 212, 0.2);
-                box-shadow: 0 0 15px rgba(0, 245, 212, 0.1), 0 0 30px rgba(0, 245, 212, 0.05);
-                backdrop-filter: blur(10px);
+                background: rgba(27, 38, 59, 0.8);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 12px;
             }
 
             .topic-card {
-                transition: all 0.3s ease;
+                transition: all 0.2s ease;
                 position: relative;
-                overflow: hidden;
             }
 
             .topic-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 20px 40px rgba(0, 245, 212, 0.2);
-            }
-
-            .topic-card::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: -100%;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(90deg, transparent, rgba(0, 245, 212, 0.1), transparent);
-                transition: left 0.5s;
-            }
-
-            .topic-card:hover::before {
-                left: 100%;
+                transform: translateY(-2px);
+                background: rgba(27, 38, 59, 0.9);
             }
 
             .scroll-down-indicator {
@@ -78,31 +62,12 @@
                 bottom: 2rem;
                 left: 50%;
                 transform: translateX(-50%);
-                animation: bounce 2s infinite;
-            }
-
-            @keyframes bounce {
-
-                0%,
-                20%,
-                50%,
-                80%,
-                100% {
-                    transform: translate(-50%, 0);
-                }
-
-                40% {
-                    transform: translate(-50%, -20px);
-                }
-
-                60% {
-                    transform: translate(-50%, -10px);
-                }
+                opacity: 0.7;
             }
 
             @media (min-width: 768px) {
                 .viewport {
-                    height: 100vh;
+                    padding: 3rem 2rem;
                 }
             }
         </style>
@@ -139,20 +104,23 @@
                         explanation</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                     <!-- Home Loan Hack -->
                     <a href="10-year-homeloan/index.html"
-                        class="topic-card glow-card p-6 md:p-8 rounded-xl block group">
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
                         <div data-aos="fade-up" data-aos-delay="100">
-                            <div class="text-5xl mb-4">🏠</div>
-                            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-[#00F5D4] transition-colors">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">🏠</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#00F5D4] transition-colors">
                                 Home Loan Hack</h3>
-                            <p class="text-gray-400 text-sm md:text-base mb-4">How to finish your 25-year loan in just
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">How to finish your
+                                25-year loan in just
                                 10 years and save ₹42 lakhs in interest</p>
-                            <div class="flex items-center text-[#00F5D4] font-semibold">
+                            <div class="flex items-center text-[#00F5D4] font-semibold text-sm md:text-base">
                                 <span>Learn More</span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7" />
@@ -162,17 +130,20 @@
                     </a>
 
                     <!-- ETF vs Mutual Fund -->
-                    <a href="etf-mf/index.html" class="topic-card glow-card p-6 md:p-8 rounded-xl block group">
-                        <div data-aos="fade-up" data-aos-delay="200">
-                            <div class="text-5xl mb-4">📊</div>
-                            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-[#9B5DE5] transition-colors">
+                    <a href="etf-mf/index.html" class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="150">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">📊</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#9B5DE5] transition-colors">
                                 ETF vs Mutual Fund</h3>
-                            <p class="text-gray-400 text-sm md:text-base mb-4">Complete comparison with costs, taxation,
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">Complete comparison
+                                with costs, taxation,
                                 and which one is right for you in 2025</p>
-                            <div class="flex items-center text-[#9B5DE5] font-semibold">
+                            <div class="flex items-center text-[#9B5DE5] font-semibold text-sm md:text-base">
                                 <span>Learn More</span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7" />
@@ -183,17 +154,165 @@
 
                     <!-- IT Sector Reality -->
                     <a href="it-sector-reality/index.html"
-                        class="topic-card glow-card p-6 md:p-8 rounded-xl block group">
-                        <div data-aos="fade-up" data-aos-delay="300">
-                            <div class="text-5xl mb-4">💻</div>
-                            <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-[#F94144] transition-colors">
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">💻</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#F94144] transition-colors">
                                 IT Job Reality 2025</h3>
-                            <p class="text-gray-400 text-sm md:text-base mb-4">The harsh truth about IT jobs, salary
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">The harsh truth about
+                                IT jobs, salary
                                 stagnation, and skills that actually matter</p>
-                            <div class="flex items-center text-[#F94144] font-semibold">
+                            <div class="flex items-center text-[#F94144] font-semibold text-sm md:text-base">
                                 <span>Learn More</span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Renting is Throwing Money Away -->
+                    <a href="renting-money-away/index.html"
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="250">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">🏠💨</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#00F5D4] transition-colors">
+                                Renting Money Away</h3>
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">The myth that renting
+                                is waste - data shows
+                                investing difference creates more wealth</p>
+                            <div class="flex items-center text-[#00F5D4] font-semibold text-sm md:text-base">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Credit Cards Bad Myth -->
+                    <a href="credit-cards-bad/index.html"
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">💳🚀</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#9B5DE5] transition-colors">
+                                Credit Cards Myth</h3>
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">Why credit cards
+                                aren't debt traps - used smartly
+                                they create wealth through rewards</p>
+                            <div class="flex items-center text-[#9B5DE5] font-semibold text-sm md:text-base">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Huge Income Investing Myth -->
+                    <a href="huge-income-investing/index.html"
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="350">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">💼🚫</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#F94144] transition-colors">
+                                Income Investment Myth</h3>
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">You don't need lakhs
+                                to start investing -
+                                time and consistency create wealth</p>
+                            <div class="flex items-center text-[#F94144] font-semibold text-sm md:text-base">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Car/House Investment Myth -->
+                    <a href="car-house-investment/index.html"
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">🚗🏠</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#00F5D4] transition-colors">
+                                Car/House Investment</h3>
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">Why cars and houses
+                                aren't investments -
+                                they're wealth destroyers</p>
+                            <div class="flex items-center text-[#00F5D4] font-semibold text-sm md:text-base">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Insurance Investment Myth -->
+                    <a href="insurance-investment/index.html"
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="450">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">🛡️💰</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#9B5DE5] transition-colors">
+                                Insurance Investment</h3>
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">Why endowment plans
+                                destroy wealth -
+                                separate protection from growth</p>
+                            <div class="flex items-center text-[#9B5DE5] font-semibold text-sm md:text-base">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 5 Myths About Personal Finance -->
+                    <a href="5-myths-personal-finance.html"
+                        class="topic-card glow-card p-4 md:p-6 lg:p-8 rounded-xl block group">
+                        <div data-aos="fade-up" data-aos-delay="500">
+                            <div class="text-4xl md:text-5xl mb-3 md:mb-4">💡📊</div>
+                            <h3
+                                class="text-lg md:text-xl lg:text-2xl font-bold mb-3 md:mb-4 group-hover:text-[#F94144] transition-colors">
+                                5 Myths About Finance</h3>
+                            <p class="text-gray-400 text-xs md:text-sm lg:text-base mb-3 md:mb-4">Busting common myths
+                                about
+                                renting, credit cards, investing,
+                                assets, and insurance decisions</p>
+                            <div class="flex items-center text-[#F94144] font-semibold text-sm md:text-base">
+                                <span>Learn More</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 md:h-5 md:w-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M9 5l7 7-7 7" />
@@ -210,7 +329,7 @@
             <div class="w-full max-w-4xl">
                 <div class="glow-card p-8 md:p-12 rounded-xl" data-aos="zoom-in">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Why These Topics Matter</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-left">
                         <div>
                             <h3 class="text-xl font-bold mb-4 text-[#00F5D4]">🏠 Smart Financing</h3>
                             <p class="text-gray-400 mb-6">Home loans shouldn't trap you for 25 years. Learn strategies
@@ -227,9 +346,38 @@
                                 job market dynamics and which skills will secure your future.</p>
                         </div>
                         <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#00F5D4]">🏠💨 Housing Myths</h3>
+                            <p class="text-gray-400 mb-6">Renting isn't wasting money - data proves investing the
+                                difference
+                                creates more wealth than buying in many cases.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#9B5DE5]">💳💰 Credit Wisdom</h3>
+                            <p class="text-gray-400 mb-6">Credit cards aren't debt traps when used smartly. They provide
+                                rewards, cashback, and free credit that can build wealth.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#F94144]">🚀 Investment Access</h3>
+                            <p class="text-gray-400 mb-6">You don't need lakhs to start investing. Small amounts
+                                compounded
+                                over time create extraordinary wealth.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#00F5D4]">🚗🏠 Asset Myths</h3>
+                            <p class="text-gray-400 mb-6">Cars and houses aren't investments - they're depreciating
+                                assets
+                                that cost more than they're worth.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-[#9B5DE5]">🛡️📈 Protection vs Growth</h3>
+                            <p class="text-gray-400 mb-6">Insurance protects, investments grow. Mixing them in endowment
+                                plans destroys wealth - separate them instead.</p>
+                        </div>
+                        <div class="md:col-span-2 lg:col-span-3">
                             <h3 class="text-xl font-bold mb-4 text-white">🎯 Take Action</h3>
                             <p class="text-gray-400 mb-6">Knowledge is power, but only when you apply it. These insights
-                                are designed to help you make informed decisions about your financial future.</p>
+                                are designed to help you make informed decisions about your financial future and avoid
+                                the common myths that trap millions.</p>
                         </div>
                     </div>
                 </div>

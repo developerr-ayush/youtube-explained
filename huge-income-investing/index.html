@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anyone Can Get Rich Investing - The Truth</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: #0a0a0a;
+                color: #e5e7eb;
+            }
+
+            .scroll-container {
+                scroll-snap-type: y mandatory;
+                overflow-y: auto;
+                height: 100vh;
+                scroll-behavior: smooth;
+            }
+
+            .scroll-section {
+                scroll-snap-align: start;
+                min-height: 100vh;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.8s ease-out forwards;
+            }
+
+            .scroll-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .scroll-container {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            .accent-text {
+                color: #F94144;
+            }
+
+            .section {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 4rem 1rem;
+                text-align: center;
+                position: relative;
+            }
+
+            .accent-text {
+                color: #F94144;
+            }
+
+            /* --- ANIMATIONS --- */
+            @keyframes draw-line {
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            .draw-animation {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+            }
+
+            .draw-animation.animated {
+                animation: draw-line 2s 0.5s ease-out forwards;
+            }
+
+            @keyframes fade-in-up {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animated-item {
+                opacity: 0;
+            }
+
+            .animated-item.animated {
+                animation: fade-in-up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            }
+
+            /* Staggered delays */
+            .delay-1.animated {
+                animation-delay: 0.2s;
+            }
+
+            .delay-2.animated {
+                animation-delay: 0.4s;
+            }
+
+            .delay-3.animated {
+                animation-delay: 0.6s;
+            }
+
+            .delay-4.animated {
+                animation-delay: 0.8s;
+            }
+
+            @keyframes pulse-glow {
+
+                0%,
+                100% {
+                    fill: #F94144;
+                    filter: drop-shadow(0 0 3px #F94144);
+                }
+
+                50% {
+                    fill: #ff6b6b;
+                    filter: drop-shadow(0 0 8px #F94144);
+                }
+            }
+
+            .pulse-glow-animation.animated {
+                animation: pulse-glow 2s 2.5s ease-in-out infinite;
+            }
+
+            /* Mobile adjustments */
+            @media (max-width: 768px) {
+                .section {
+                    padding: 3rem 1rem;
+                    min-height: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-black text-white">
+
+        <!-- Section 1: The Hook -->
+        <section class="section">
+            <div class="w-full max-w-4xl mx-auto">
+                <h1 class="animated-item text-4xl md:text-7xl font-bold mb-8">Anyone Can Get Rich Investing</h1>
+                <div class="animated-item delay-1 text-center">
+                    <div class="text-6xl mb-8">💼🚫</div>
+                    <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">
+                        "I need lakhs in salary to start investing."
+                        <br>
+                        <span class="text-gray-400">Everyone says this. But they're wrong.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Reality -->
+        <section class="section">
+            <div class="w-full max-w-5xl mx-auto">
+                <h1 class="animated-item text-4xl md:text-6xl font-bold mb-8">The Truth: Start Small, Win Big</h1>
+                <div class="animated-item delay-1 grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-green-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-green-400">💡 The Truth About Starting Small</h3>
+                            <ul class="text-left space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">🎯</span>
+                                    Start with ₹500/month
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">⏰</span>
+                                    Time compounds your money
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">📈</span>
+                                    Consistent small amounts win
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">🎪</span>
+                                    SIPs make it automatic
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-red-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-red-400">❌ The Waiting Game Trap</h3>
+                            <ul class="text-left space-y-3 text-gray-300">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">🕐</span>
+                                    "I'll start when salary increases"
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">💸</span>
+                                    Missing opportunity cost
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">📉</span>
+                                    Inflation eats your money
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-red-400">🎭</span>
+                                    Excuses prevent action
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Data/Graph -->
+        <section class="section">
+            <div class="w-full max-w-6xl mx-auto">
+                <h1 class="animated-item text-4xl md:text-6xl font-bold mb-8">The Power of Starting Early</h1>
+                <div class="animated-item delay-1 grid md:grid-cols-2 gap-8">
+                    <!-- Investment Examples -->
+                    <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Small Amounts, Big Results</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-gray-800/50 rounded-lg">
+                                <span class="text-lg">₹500/month for 30 yrs</span>
+                                <span class="text-xl font-bold accent-text">₹17 Lakhs</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 bg-gray-800/50 rounded-lg">
+                                <span class="text-lg">₹5,000/month for 10 yrs</span>
+                                <span class="text-xl font-bold text-green-400">₹11 Lakhs</span>
+                            </div>
+                            <div
+                                class="flex justify-between items-center p-4 bg-red-900/30 border border-red-500/30 rounded-lg">
+                                <span class="text-lg">Waiting 5 years to start</span>
+                                <span class="text-xl font-bold text-red-400">₹8 Lakhs Lost</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Growth Chart -->
+                    <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Early vs Late Start</h3>
+                        <svg viewBox="0 0 400 300" class="w-full h-auto">
+                            <!-- Grid -->
+                            <line x1="30" y1="250" x2="370" y2="250" stroke="#4A5568" stroke-width="1" />
+                            <line x1="30" y1="200" x2="370" y2="200" stroke="#2D3748" stroke-width="1"
+                                stroke-dasharray="2" />
+                            <line x1="30" y1="150" x2="370" y2="150" stroke="#2D3748" stroke-width="1"
+                                stroke-dasharray="2" />
+                            <line x1="30" y1="100" x2="370" y2="100" stroke="#2D3748" stroke-width="1"
+                                stroke-dasharray="2" />
+                            <line x1="30" y1="50" x2="370" y2="50" stroke="#2D3748" stroke-width="1"
+                                stroke-dasharray="2" />
+
+                            <!-- Early Start Line (Green) -->
+                            <path d="M 50 240 L 100 220 L 150 190 L 200 150 L 250 100 L 300 60 L 350 30"
+                                stroke="#00F5D4" stroke-width="4" fill="none" class="draw-animation" />
+
+                            <!-- Late Start Line (Red) -->
+                            <path d="M 150 240 L 200 220 L 250 190 L 300 150 L 350 100" stroke="#F94144"
+                                stroke-width="4" fill="none" class="draw-animation" />
+
+                            <!-- Data Points -->
+                            <circle cx="50" cy="240" r="4" fill="#00F5D4" />
+                            <circle cx="350" cy="30" r="4" fill="#00F5D4" />
+                            <circle cx="150" cy="240" r="4" fill="#F94144" />
+                            <circle cx="350" cy="100" r="4" fill="#F94144" />
+
+                            <!-- Legend -->
+                            <rect x="280" y="20" width="15" height="15" fill="#00F5D4" />
+                            <text x="300" y="32" fill="#00F5D4" font-size="12">Start at 25</text>
+                            <rect x="280" y="40" width="15" height="15" fill="#F94144" />
+                            <text x="300" y="52" fill="#F94144" font-size="12">Start at 35</text>
+
+                            <!-- Year labels -->
+                            <text x="50" y="275" fill="#718096" font-size="10" text-anchor="middle">Age 25</text>
+                            <text x="150" y="275" fill="#718096" font-size="10" text-anchor="middle">Age 35</text>
+                            <text x="350" y="275" fill="#718096" font-size="10" text-anchor="middle">Age 55</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Real Examples -->
+                <div class="animated-item delay-2 mt-12 grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-900/30 border border-gray-800 p-6 rounded-xl text-center">
+                        <div class="text-3xl mb-4">🍕</div>
+                        <h4 class="text-xl font-bold mb-2">Skip Coffee</h4>
+                        <p class="text-gray-400 mb-4">₹200/day → ₹6,000/month</p>
+                        <p class="accent-text font-bold">30 yrs @12% = ₹8.5L</p>
+                    </div>
+                    <div class="bg-gray-900/30 border border-gray-800 p-6 rounded-xl text-center">
+                        <div class="text-3xl mb-4">🚬</div>
+                        <h4 class="text-xl font-bold mb-2">Quit Smoking</h4>
+                        <p class="text-gray-400 mb-4">₹300/day → ₹9,000/month</p>
+                        <p class="accent-text font-bold">30 yrs @12% = ₹12.8L</p>
+                    </div>
+                    <div class="bg-gray-900/30 border border-gray-800 p-6 rounded-xl text-center">
+                        <div class="text-3xl mb-4">📱</div>
+                        <h4 class="text-xl font-bold mb-2">Cheaper Phone</h4>
+                        <p class="text-gray-400 mb-4">₹5,000 saved once</p>
+                        <p class="accent-text font-bold">30 yrs @12% = ₹28L</p>
+                    </div>
+                </div>
+
+                <!-- The Big Truth -->
+                <div class="animated-item delay-3 mt-12 bg-red-900/20 border border-red-500/30 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-6 text-center glow">The 5-Year Delay Cost</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">⏰</div>
+                            <p class="text-lg text-gray-300">If you start investing ₹5,000/month at age 25:</p>
+                            <p class="text-2xl font-bold accent-text mt-4">₹11 lakhs by age 35</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">💸</div>
+                            <p class="text-lg text-gray-300">If you wait until age 30 to start:</p>
+                            <p class="text-2xl font-bold text-red-400 mt-4">₹6 lakhs by age 35</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <p class="text-xl font-bold glow">₹5 lakhs lost due to 5-year delay</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Takeaway -->
+        <section class="section">
+            <div class="text-center">
+                <h1 class="animated-item text-4xl md:text-7xl font-extrabold mb-8 glow">START SMALL</h1>
+                <h2 class="animated-item delay-1 text-2xl md:text-4xl font-bold mb-8 accent-text">Start today. 🚀</h2>
+                <div class="animated-item delay-2 max-w-4xl mx-auto">
+                    <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                        Every expert was once a beginner. Every millionaire started with small amounts.
+                        <br>
+                        The difference is they started early.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-8 mt-12">
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-green-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-green-400">✅ Action Steps</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• Start with ₹500/month today</li>
+                                <li>• Set up automatic SIP</li>
+                                <li>• Increase amount as salary grows</li>
+                                <li>• Track your investments monthly</li>
+                                <li>• Learn basics through apps</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-900/50 backdrop-blur-sm border border-red-500/50 rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-4 text-red-400">❌ Stop Waiting For</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• "Perfect" salary increase</li>
+                                <li>• "Right" market timing</li>
+                                <li>• More knowledge (just start)</li>
+                                <li>• Someone else's approval</li>
+                                <li>• "Better" opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-12 bg-purple-900/20 border border-purple-500/30 rounded-2xl p-8">
+                        <h3 class="text-2xl font-bold mb-4 glow">Remember This</h3>
+                        <div class="grid md:grid-cols-2 gap-8 text-left">
+                            <div>
+                                <p class="text-lg text-gray-300 mb-4">
+                                    <span class="accent-text font-bold">₹500/month</span> invested for 30 years at 12%
+                                    CAGR becomes:
+                                </p>
+                                <p class="text-3xl font-bold glow">₹17 lakhs</p>
+                            </div>
+                            <div>
+                                <p class="text-lg text-gray-300 mb-4">
+                                    That's <span class="text-green-400 font-bold">₹47 lakhs</span> invested, but you
+                                    only put in <span class="accent-text font-bold">₹1.8 lakhs</span>.
+                                </p>
+                                <p class="text-xl font-bold text-green-400">₹15.2 lakhs is magic money</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Scroll-triggered animations
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '-50px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add animated class to all animated items in this section
+                        const animatedItems = entry.target.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animated');
+                            }, index * 200); // Stagger animations
+                        });
+
+                        // Special handling for draw animations
+                        const drawAnimations = entry.target.querySelectorAll('.draw-animation');
+                        drawAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 1000);
+                        });
+
+                        // Special handling for pulse animations
+                        const pulseAnimations = entry.target.querySelectorAll('.pulse-glow-animation');
+                        pulseAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 2000);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Trigger first section animations on load
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const firstSection = document.querySelector('.section');
+                    if (firstSection) {
+                        const animatedItems = firstSection.querySelectorAll('.animated-item');
+                        animatedItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animated');
+                            }, index * 200);
+                        });
+
+                        const drawAnimations = firstSection.querySelectorAll('.draw-animation');
+                        drawAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 1000);
+                        });
+
+                        const pulseAnimations = firstSection.querySelectorAll('.pulse-glow-animation');
+                        pulseAnimations.forEach(animation => {
+                            setTimeout(() => {
+                                animation.classList.add('animated');
+                            }, 2000);
+                        });
+                    }
+                }, 300);
+            });
+        </script>
+
+    </body>
+
+</html>
