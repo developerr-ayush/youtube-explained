@@ -4,28 +4,31 @@ globs:
 alwaysApply: true
 ---
 
-
 # 🎬 Cursor Rules — Smart.MoneyX Finance Channel
 
 ## 🎯 Purpose
 
 These rules ensure **consistent, high-quality, YouTube-Explained style** presentations (scroll-based, modern, finance-focused).
 Think: **clear info + engaging visuals + smooth storytelling.**
+i will provide you all information and you have to create a new webpage which has all the information in such way which mentioned below
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Tailwind CSS** → Styling
-* **Chart.js** → Charts & data viz
-* **Google Fonts (Inter)** → Clean modern typography
+- **Tailwind CSS** → Styling
+- **Chart.js** → Charts & data viz
+- **Google Fonts (Inter)** → Clean modern typography
 
 ### CDN Includes
 
 ```html
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+  rel="stylesheet"
+/>
 ```
 
 ---
@@ -34,20 +37,20 @@ Think: **clear info + engaging visuals + smooth storytelling.**
 
 ### Colors
 
-* **Backgrounds** → `bg-black` (main), `bg-gray-900` (sections)
-* **Text** → `text-gray-300` (primary), `text-gray-400` (secondary), `text-gray-500` (muted)
-* **Accents (max 2 per section)**
+- **Backgrounds** → `bg-black` (main), `bg-gray-900` (sections)
+- **Text** → `text-gray-300` (primary), `text-gray-400` (secondary), `text-gray-500` (muted)
+- **Accents (max 2 per section)**
 
-  * Cyan → Standard / info
-  * Fuchsia → Premium / highlights
-  * Rose → Warnings / costly
-  * Green → Benefits / savings
-  * Purple → Dates / implementation
+  - Cyan → Standard / info
+  - Fuchsia → Premium / highlights
+  - Rose → Warnings / costly
+  - Green → Benefits / savings
+  - Purple → Dates / implementation
 
 ### Gradients
 
-* Hero → radial cyan+fuchsia glow
-* CTA → cyan → black radial fade
+- Hero → radial cyan+fuchsia glow
+- CTA → cyan → black radial fade
 
 ---
 
@@ -70,48 +73,49 @@ Think: **clear info + engaging visuals + smooth storytelling.**
 
 ### Section Types
 
-1. **Hero** → Emoji, gradient headline, subtitle, description
+1. **Hero** → Emoji, gradient headline, subtitle and maybe description
 2. **Overview** → Gradient heading + simple highlight text
 3. **Data Table** → Scrollable, hover rows, color-coded columns
-4. **Benefits** → ✅ Grid of 4–6 key benefits
-5. **CTA** → Big emoji, bold gradient headline, one action button
+4. **Benefits** → ✅ Grid of 4–6 key benefits in different sections or table or charts
+5. **CTA** → Follow for more
+**Note this is not hard and fast rule but you can use it
 
 ---
 
 ## 🎭 Animations & Interactions
 
-* **Scroll Snap** → Each section full screen
-* **Fade-In** → Subtle upward fade for content
-* **Hover Effects** → Light gray background highlights on table rows
+- **Scroll Snap** → Each section full screen
+- **Fade-In** → Subtle upward fade for content
+- **Hover Effects** → Light gray background highlights on table rows
 
 ---
 
 ## 📝 Content Guidelines
 
-* Keep it **clear, simple, and scannable**
-* Use **emojis sparingly** for interest (✅, ⚠️, 📊, 📺)
-* Section length → **1 screen each** (no overcrowding)
-* Flow → **Hook → Explain → Benefits → Action**
+- Keep it **clear, simple, and scannable**
+- Use **emojis sparingly** for interest (✅, ⚠️, 📊, 📺)
+- Section length → **1 screen each** (no overcrowding)
+- Flow → **Hook → Context -> Explain → Benefits → Action**
 
 ---
 
 ## 🔧 Dev Rules
 
-* Use **semantic HTML5** & **Tailwind utilities**
-* Keep spacing consistent (`mb-4, mb-6, mb-8, mb-12`)
-* **Mobile-first** → Always test responsive behavior
-* Optimize for **performance** → minimal CSS, CDN libraries
-* Ensure **contrast & accessibility**
+- Use **semantic HTML5** & **Tailwind utilities**
+- Keep spacing consistent (`mb-4, mb-6, mb-8, mb-12`)
+- **Mobile-first** → Always test responsive behavior
+- Optimize for **performance** → minimal CSS, CDN libraries
+- Ensure **contrast & accessibility**
 
 ---
 
 ## 🎨 Visual Hierarchy
 
-* Hero → `text-6xl md:text-[7rem]`
-* Section Headers → `text-3xl md:text-5xl`
-* Subheaders → `text-xl md:text-2xl`
-* Body → `text-base md:text-lg`
-* Small → `text-sm md:text-base`
+- Hero → `text-6xl md:text-[7rem]`
+- Section Headers → `text-3xl md:text-5xl`
+- Subheaders → `text-xl md:text-2xl`
+- Body → `text-base md:text-lg`
+- Small → `text-sm md:text-base`
 
 ---
 
@@ -136,10 +140,10 @@ project/
 └── tools/       # Utility scripts
 ```
 
-* **File names** → kebab-case (`gst-2-0.html`)
-* **Custom CSS classes** → kebab-case
-* **JS IDs** → camelCase
-* **Images** → descriptive-hyphenated names
+- **File names** → kebab-case (`gst-2-0.html`)
+- **Custom CSS classes** → kebab-case
+- **JS IDs** → camelCase
+- **Images** → descriptive-hyphenated names
 
 ---
 
@@ -155,10 +159,10 @@ project/
 
 ## 🔄 Maintenance
 
-* Update palette when new theme needed
-* Add new sections only if they follow templates
-* Regularly test **performance & scroll UX**
-* Keep docs **in sync with changes**
+- Update palette when new theme needed
+- Add new sections only if they follow templates
+- Regularly test **performance & scroll UX**
+- Keep docs **in sync with changes**
 
 ---
 
