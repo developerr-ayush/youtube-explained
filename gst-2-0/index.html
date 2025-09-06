@@ -27,31 +27,72 @@
 			}
 
 			@keyframes fadeIn {
-				from { opacity: 0; transform: translateY(20px); }
-				to { opacity: 1; transform: translateY(0); }
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 
 			.fade-in {
 				animation: fadeIn 0.8s ease-out forwards;
 			}
 
-			.scroll-container::-webkit-scrollbar { display: none; }
-			.scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
+			.scroll-container::-webkit-scrollbar {
+				display: none;
+			}
 
-			@keyframes pulse { 0%,100% { transform: scale(1);} 50% { transform: scale(1.05);} }
-			.pulse-glow { animation: pulse 2s infinite; }
+			.scroll-container {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
 
-			@keyframes slideUp { from { transform: translateY(100%); opacity: 0;} to { transform: translateY(0); opacity: 1;} }
-			.slide-up { animation: slideUp 0.8s ease-out forwards; }
+			@keyframes pulse {
+
+				0%,
+				100% {
+					transform: scale(1);
+				}
+
+				50% {
+					transform: scale(1.05);
+				}
+			}
+
+			.pulse-glow {
+				animation: pulse 2s infinite;
+			}
+
+			@keyframes slideUp {
+				from {
+					transform: translateY(100%);
+					opacity: 0;
+				}
+
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			.slide-up {
+				animation: slideUp 0.8s ease-out forwards;
+			}
 		</style>
 	</head>
 
 	<body class="bg-black">
 
 		<!-- Back to Home Button -->
-		<a href="../index.html" class="fixed top-4 left-4 z-50 bg-gray-800/80 hover:bg-gray-700/80 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 backdrop-blur-sm">
+		<a href="../index.html"
+			class="fixed top-4 left-4 z-50 bg-gray-800/80 hover:bg-gray-700/80 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 backdrop-blur-sm">
 			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+				</path>
 			</svg>
 			<span class="text-sm font-medium">Back to Home</span>
 		</a>
@@ -59,226 +100,368 @@
 		<div class="scroll-container">
 
 			<!-- Hero -->
-			<section class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center relative overflow-hidden bg-black">
-				<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(56,189,248,0.18),rgba(147,51,234,0.12))]"></div>
+			<section
+				class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center relative overflow-hidden bg-black">
+				<div
+					class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(56,189,248,0.18),rgba(147,51,234,0.12))]">
+				</div>
 				<div class="fade-in z-10 max-w-4xl">
 					<div class="text-6xl md:text-[7rem] leading-none mb-6">🇮🇳⚖️</div>
-					<h1 class="text-4xl md:text-7xl font-black tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-rose-400">
+					<h1
+						class="text-4xl md:text-7xl font-black tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-rose-400">
 						GST 2.0 Overhaul
 					</h1>
-					<p class="text-lg md:text-2xl text-gray-300 mb-6">Effective September 22, 2025 • Source: 56th GST Council</p>
-					<p class="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">Simpler slabs, lower compliance, demand boost, and key fixes for inverted duties and insurance taxation.</p>
+					<p class="text-lg md:text-2xl text-gray-300 mb-6">Effective September 22, 2025 • Source: 56th GST
+						Council</p>
+					<p class="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">Simpler slabs, lower compliance,
+						demand boost, and key fixes for inverted duties and insurance taxation.</p>
 					<div class="mt-10 animate-bounce">
-						<svg class="w-8 h-8 text-cyan-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+						<svg class="w-8 h-8 text-cyan-400 mx-auto" fill="none" stroke="currentColor"
+							viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+							</path>
 						</svg>
+					</div>
+				</div>
+			</section>
+			<!-- Current GST Structure (Before) -->
+			<section
+				class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
+				<div class="fade-in w-full max-w-6xl">
+					<h2 class="text-3xl md:text-5xl font-bold mb-8 text-white">Current GST Structure (Before)</h2>
+					<p class="text-lg text-gray-400 mb-8">Existing slabs and cess prior to GST 2.0</p>
+					<div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+						<div class="bg-black border border-gray-700 rounded-2xl p-6">
+							<h3 class="text-xl font-bold text-gray-200">Nil</h3>
+							<p class="text-gray-400 text-sm">Essential items & exemptions</p>
+						</div>
+						<div class="bg-black border border-emerald-400/40 rounded-2xl p-6">
+							<h3 class="text-2xl font-bold text-emerald-400">5%</h3>
+							<p class="text-gray-400 text-sm">Merit goods</p>
+						</div>
+						<div class="bg-black border border-yellow-400/40 rounded-2xl p-6">
+							<h3 class="text-2xl font-bold text-yellow-300">12%</h3>
+							<p class="text-gray-400 text-sm">Select goods & services</p>
+						</div>
+						<div class="bg-black border border-cyan-400/40 rounded-2xl p-6">
+							<h3 class="text-2xl font-bold text-cyan-400">18%</h3>
+							<p class="text-gray-400 text-sm">Standard rate</p>
+						</div>
+						<div class="bg-black border border-rose-400/40 rounded-2xl p-6">
+							<h3 class="text-2xl font-bold text-rose-400">28% + Cess</h3>
+							<p class="text-gray-400 text-sm">Select luxury/demerit items</p>
+						</div>
+					</div>
+					<div class="bg-black border border-gray-700 rounded-2xl p-6">
+						<h3 class="text-xl font-bold text-blue-400 mb-4">Rate Ladder (Before)</h3>
+						<canvas id="currentRateChart" class="w-full h-64"></canvas>
+						<p class="text-xs text-gray-500 mt-3">Bars show slab rates in percent (not market share).</p>
 					</div>
 				</div>
 			</section>
 
 			<!-- New Slab Structure -->
-			<section class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
+			<section
+				class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
 				<div class="fade-in w-full max-w-5xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-white">New Slab Structure</h2>
+					<h2 class="text-3xl md:text-5xl font-bold mb-3 text-white">GST 2.0: New Slab Structure (After)</h2>
+					<p class="text-gray-400 mb-9">Effective September 22, 2025</p>
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-						<div class="bg-black border border-emerald-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+						<div
+							class="bg-black border border-emerald-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
 							<div class="text-5xl mb-4">🥗</div>
 							<h3 class="text-2xl font-bold text-emerald-400 mb-2">5% Merit</h3>
 							<p class="text-gray-300">Essentials & common-use items</p>
 						</div>
-						<div class="bg-black border border-cyan-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+						<div
+							class="bg-black border border-cyan-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
 							<div class="text-5xl mb-4">⚙️</div>
 							<h3 class="text-2xl font-bold text-cyan-400 mb-2">18% Standard</h3>
-							<p class="text-gray-300">Default for most goods & services</p>
+							<p class="text-gray-300">Most goods & services, consumer durables</p>
 						</div>
-						<div class="bg-black border border-rose-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+						<div
+							class="bg-black border border-rose-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
 							<div class="text-5xl mb-4">🚫💎</div>
 							<h3 class="text-2xl font-bold text-rose-400 mb-2">40% Sin & Luxury</h3>
 							<p class="text-gray-300">Demerit & luxury items</p>
 						</div>
 					</div>
-				</div>
-			</section>
-
-			<!-- Cheaper Items -->
-			<section class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-black">
-				<div class="fade-in w-full max-w-6xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">What Gets Cheaper</h2>
-					<div class="grid md:grid-cols-2 gap-8 text-left">
-						<div class="bg-emerald-900/20 border-2 border-emerald-400/50 rounded-2xl p-8">
-							<h3 class="text-2xl font-bold text-emerald-400 mb-4">To 5% (from 12%/18%)</h3>
-							<ul class="space-y-3 text-gray-300 text-lg">
-								<li>✅ Packaged foods: sauces, processed essentials</li>
-								<li>✅ Dairy: butter, cheese, other dairy items</li>
-								<li>✅ Household: soaps, toothpaste, hair oil, toiletries</li>
-								<li>✅ Apparel & footwear: common textiles and footwear</li>
-							</ul>
-						</div>
-						<div class="bg-cyan-900/20 border-2 border-cyan-400/50 rounded-2xl p-8">
-							<h3 class="text-2xl font-bold text-cyan-400 mb-4">To 18% (from 28%)</h3>
-							<ul class="space-y-3 text-gray-300 text-lg">
-								<li>✅ Automobiles: small cars and two-wheelers</li>
-								<li>✅ Consumer durables: TVs, refrigerators, ACs, washing machines</li>
-							</ul>
-						</div>
+					<div class="mt-10 bg-black border border-gray-700 rounded-2xl p-6">
+						<h3 class="text-xl font-bold text-green-400 mb-4">Rate Ladder (After)</h3>
+						<canvas id="newRateChart" class="w-full h-64"></canvas>
+						<p class="text-xs text-gray-500 mt-3">Bars show slab rates in percent (post-reform).</p>
 					</div>
 				</div>
 			</section>
 
-			<!-- Costlier Items -->
-			<section class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
-				<div class="fade-in w-full max-w-4xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-white">What Gets Costlier</h2>
+			<!-- Visual Break -->
+			<section
+				class="scroll-section min-h-screen relative flex items-center justify-center text-center bg-black overflow-hidden">
+				<img src="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=2400&auto=format&fit=crop"
+					alt="Finance charts and data visualization"
+					class="absolute inset-0 w-full h-full object-cover opacity-40">
+				<div class="relative z-10 max-w-3xl p-6">
+					<h3 class="text-3xl md:text-5xl font-bold text-white mb-4">Simpler, Clearer, Faster</h3>
+					<p class="text-gray-200">GST 2.0 streamlines slabs and removes friction for citizens and businesses.
+					</p>
+				</div>
+			</section>
+
+			<!-- GST 2.0 Rate Changes Overview -->
+			<section
+				class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
+				<div class="fade-in w-full max-w-6xl">
+					<h2
+						class="text-3xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+						GST 2.0 Rate Changes</h2>
+					<p class="text-lg text-gray-400 mb-12">From 5 slabs to 4 slabs • Effective September 22, 2025</p>
+
+					<div class="grid md:grid-cols-4 gap-4 mb-8">
+						<div class="bg-emerald-900/20 border border-emerald-400/50 rounded-xl p-6">
+							<div class="text-3xl mb-2">0%</div>
+							<div class="text-sm text-emerald-300">Nil Rate</div>
+							<div class="text-xs text-gray-400 mt-2">Insurance, education supplies</div>
+						</div>
+						<div class="bg-emerald-900/20 border border-emerald-400/50 rounded-xl p-6">
+							<div class="text-3xl mb-2">5%</div>
+							<div class="text-sm text-emerald-300">Essentials</div>
+							<div class="text-xs text-gray-400 mt-2">Food, healthcare, agriculture</div>
+						</div>
+						<div class="bg-cyan-900/20 border border-cyan-400/50 rounded-xl p-6">
+							<div class="text-3xl mb-2">18%</div>
+							<div class="text-sm text-cyan-300">Standard</div>
+							<div class="text-xs text-gray-400 mt-2">Most goods & services</div>
+						</div>
+						<div class="bg-rose-900/20 border border-rose-400/50 rounded-xl p-6">
+							<div class="text-3xl mb-2">40%</div>
+							<div class="text-sm text-rose-300">Luxury</div>
+							<div class="text-xs text-gray-400 mt-2">Tobacco, luxury cars</div>
+						</div>
+					</div>
+
 					<div class="grid md:grid-cols-2 gap-8">
+						<div class="bg-green-900/20 border-2 border-green-400/50 rounded-2xl p-8">
+							<h3 class="text-xl font-bold text-green-400 mb-4">✅ Getting Cheaper</h3>
+							<ul class="space-y-2 text-gray-300 text-left text-sm">
+								<li>• Daily essentials (soaps, food) → 5%</li>
+								<li>• Healthcare & education → 5%/Nil</li>
+								<li>• Small cars & appliances → 18%</li>
+								<li>• Agriculture equipment → 5%</li>
+							</ul>
+						</div>
+
 						<div class="bg-rose-900/20 border-2 border-rose-400/50 rounded-2xl p-8">
-							<div class="text-6xl mb-4">🚬</div>
-							<h3 class="text-2xl font-bold text-rose-400 mb-2">To 40%</h3>
-							<p class="text-gray-300">Tobacco & products, pan masala</p>
-						</div>
-						<div class="bg-rose-900/20 border-2 border-rose-400/50 rounded-2xl p-8">
-							<div class="text-6xl mb-4">🥤🚗</div>
-							<h3 class="text-2xl font-bold text-rose-400 mb-2">To 40%</h3>
-							<p class="text-gray-300">Aerated beverages, luxury automobiles</p>
+							<h3 class="text-xl font-bold text-rose-400 mb-4">📈 Getting Costlier</h3>
+							<ul class="space-y-2 text-gray-300 text-left text-sm">
+								<li>• Tobacco & cigarettes → 40%</li>
+								<li>• Luxury cars → 40%</li>
+								<li>• Aerated drinks → 40%</li>
+								<li>• Online gaming → 40%</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- Policy Reforms -->
-			<section class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-black">
+			<!-- Major Rate Changes -->
+			<section
+				class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-black">
 				<div class="fade-in w-full max-w-6xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-fuchsia-400">Key Policy Reforms</h2>
-					<div class="grid md:grid-cols-3 gap-8 text-left">
-						<div class="bg-indigo-900/20 border-2 border-indigo-400/50 rounded-2xl p-8">
-							<div class="text-5xl mb-4">🛡️</div>
-							<h3 class="text-2xl font-bold text-indigo-300 mb-2">Insurance Exempt</h3>
-							<p class="text-gray-300">Individual life and health insurance fully exempt from GST.</p>
-						</div>
-						<div class="bg-purple-900/20 border-2 border-purple-400/50 rounded-2xl p-8">
-							<div class="text-5xl mb-4">🧮</div>
-							<h3 class="text-2xl font-bold text-purple-300 mb-2">Inverted Duty Fix</h3>
-							<p class="text-gray-300">Corrected in textiles, fertilizers; reduces ITC accumulation.</p>
-						</div>
-						<div class="bg-cyan-900/20 border-2 border-cyan-400/50 rounded-2xl p-8">
-							<div class="text-5xl mb-4">⚡</div>
-							<h3 class="text-2xl font-bold text-cyan-300 mb-2">Ease of Compliance</h3>
-							<p class="text-gray-300">Faster refunds and simplified registration, esp. for MSMEs.</p>
-						</div>
+					<h2 class="text-3xl md:text-5xl font-bold mb-8 text-white">Major Rate Changes</h2>
+					<p class="text-lg text-gray-400 mb-12">Key items and their new GST rates</p>
+
+					<div class="overflow-x-auto">
+						<table class="w-full text-left text-gray-300 border-collapse">
+							<thead>
+								<tr class="border-b border-gray-600">
+									<th class="py-4 px-4 font-bold text-blue-400">Category</th>
+									<th class="py-4 px-4 font-bold text-green-400">Items</th>
+									<th class="py-4 px-4 font-bold text-purple-400">New Rate</th>
+								</tr>
+							</thead>
+							<tbody class="divide-y divide-gray-700">
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Daily Essentials</td>
+									<td class="py-4 px-4">Soaps, toothpaste, hair oil, food items</td>
+									<td class="py-4 px-4 font-bold text-green-400">5%</td>
+								</tr>
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Healthcare</td>
+									<td class="py-4 px-4">Life insurance, medical equipment, spectacles</td>
+									<td class="py-4 px-4 font-bold text-green-400">5% / Nil</td>
+								</tr>
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Education</td>
+									<td class="py-4 px-4">Books, pencils, notebooks, school supplies</td>
+									<td class="py-4 px-4 font-bold text-green-400">Nil</td>
+								</tr>
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Automobiles</td>
+									<td class="py-4 px-4">Small cars, motorcycles, goods vehicles</td>
+									<td class="py-4 px-4 font-bold text-cyan-400">18%</td>
+								</tr>
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Electronics</td>
+									<td class="py-4 px-4">ACs, TVs, refrigerators, laptops</td>
+									<td class="py-4 px-4 font-bold text-cyan-400">18%</td>
+								</tr>
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Agriculture</td>
+									<td class="py-4 px-4">Tractors, irrigation equipment, pesticides</td>
+									<td class="py-4 px-4 font-bold text-green-400">5%</td>
+								</tr>
+								<tr class="hover:bg-gray-800/30">
+									<td class="py-4 px-4 font-semibold text-blue-300">Luxury Items</td>
+									<td class="py-4 px-4">Tobacco, luxury cars, aerated drinks</td>
+									<td class="py-4 px-4 font-bold text-rose-400">40%</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</section>
 
-			<!-- Business Checklist -->
-			<section class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
+			<!-- GST 2.0 Benefits & Impact -->
+			<section
+				class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-black">
 				<div class="fade-in w-full max-w-6xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-white">Business Action Checklist</h2>
-					<div class="grid md:grid-cols-3 gap-6 text-left">
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-emerald-400 mb-2">Rate mapping</h4>
-							<p class="text-gray-300">Reclassify SKUs/HSNs/SACs to 5%/18%/40%.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-cyan-400 mb-2">Systems update</h4>
-							<p class="text-gray-300">ERP/POS/invoicing, e-invoice & e-way bill codes.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-fuchsia-400 mb-2">Pricing</h4>
-							<p class="text-gray-300">Revise MRPs/margins; assess anti-profiteering risk.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-indigo-400 mb-2">Contracts</h4>
-							<p class="text-gray-300">Trigger GST change clauses; update schedules.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-rose-400 mb-2">Inventory</h4>
-							<p class="text-gray-300">Relabel, credit notes for pre-change stock.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-yellow-300 mb-2">ITC planning</h4>
-							<p class="text-gray-300">Model inverted duty unwind & utilization.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-teal-300 mb-2">Cash flow</h4>
-							<p class="text-gray-300">Reforecast working capital; refund timelines.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-blue-300 mb-2">Compliance</h4>
-							<p class="text-gray-300">Returns, LUTs/bonds, TCS/TDS alignment.</p>
-						</div>
-						<div class="bg-black border border-gray-700 rounded-2xl p-6">
-							<h4 class="text-lg font-bold text-white mb-2">Communication</h4>
-							<p class="text-gray-300">Notify channels; update website & catalogues.</p>
+					<h2
+						class="text-3xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+						GST 2.0 Benefits & Impact</h2>
+
+					<div class="max-w-3xl mb-4 mx-auto text-center">
+						<h3 class="text-2xl font-bold text-green-400 mb-6">✅ Key Benefits</h3>
+						<div class="grid md:grid-cols-2 gap-6 text-left">
+							<div>
+								<p class="text-gray-300 mb-3"><strong>Lower Taxes:</strong> Food, medicines, toiletries
+									cheaper</p>
+								<p class="text-gray-300"><strong>Insurance Relief:</strong> Life/health insurance exempt
+								</p>
+							</div>
+							<div>
+								<p class="text-gray-300 mb-3"><strong>Simplified Structure:</strong> 5 slabs to 4 slabs
+								</p>
+								<p class="text-gray-300"><strong>Economic Boost:</strong> Autos & agriculture affordable
+								</p>
+							</div>
 						</div>
 					</div>
+
+					<div
+						class="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border-2 border-purple-400/50 rounded-2xl p-8">
+						<h3 class="text-2xl font-bold text-purple-400 mb-4">📅 Implementation Timeline</h3>
+						<div class="text-center">
+							<p class="text-2xl font-bold text-green-400 mb-2"><strong>September 22, 2025</strong></p>
+							<p class="text-gray-400">GST Council Meeting: September 3, 2025</p>
+						</div>
+					</div>
+
 				</div>
 			</section>
 
-			<!-- Economic Impact -->
-			<section class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center bg-black">
-				<div class="fade-in w-full max-w-5xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-fuchsia-400">Anticipated Economic Impact</h2>
-					<div class="grid md:grid-cols-3 gap-8">
-						<div class="bg-emerald-900/20 border-2 border-emerald-400/50 rounded-2xl p-8">
-							<div class="text-5xl mb-3">🛒</div>
-							<h3 class="text-xl font-bold text-emerald-300 mb-2">Demand Boost</h3>
-							<p class="text-gray-300">Lower prices raise purchasing power.</p>
-						</div>
-						<div class="bg-cyan-900/20 border-2 border-cyan-400/50 rounded-2xl p-8">
-							<div class="text-5xl mb-3">📉</div>
-							<h3 class="text-xl font-bold text-cyan-300 mb-2">Lower Inflation</h3>
-							<p class="text-gray-300">Relief on daily essentials.</p>
-						</div>
-						<div class="bg-fuchsia-900/20 border-2 border-fuchsia-400/50 rounded-2xl p-8">
-							<div class="text-5xl mb-3">🏭</div>
-							<h3 class="text-xl font-bold text-fuchsia-300 mb-2">Competitiveness</h3>
-							<p class="text-gray-300">Simpler structure lowers compliance costs.</p>
-						</div>
-					</div>
+			<!-- Follow for More -->
+			<section
+				class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center relative bg-black">
+				<div
+					class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/30 to-black">
 				</div>
-			</section>
-
-			<!-- Open Points & Disclaimer -->
-			<section class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900">
-				<div class="fade-in w-full max-w-5xl">
-					<h2 class="text-3xl md:text-5xl font-bold mb-12 text-white">Open Points to Monitor</h2>
-					<div class="bg-black border border-gray-700 rounded-2xl p-8 text-left">
-						<ul class="list-disc list-inside space-y-3 text-gray-300 text-lg">
-							<li>Item-level lists for 5% / 18% / 40% and luxury thresholds.</li>
-							<li>HSN/SAC schedules, exemptions, and any cess interactions.</li>
-							<li>Transitional rules for MRPs, debit/credit notes, ongoing supplies.</li>
-							<li>Approach to anti-profiteering under the new structure.</li>
-							<li>Standard operating procedures for faster refunds.</li>
-						</ul>
-						<p class="text-sm text-gray-500 mt-6">Note: Briefing compiled from provided source; confirm with official notifications.</p>
-					</div>
-				</div>
-			</section>
-
-			<!-- CTA -->
-			<section class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center relative bg-black">
-				<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/30 to-black"></div>
 				<div class="fade-in z-10 w-full max-w-3xl">
-					<div class="text-6xl mb-6">🔔</div>
-					<h1 class="text-4xl md:text-6xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-rose-400">
-						Stay Updated on Notifications
+					<div class="text-6xl mb-6">📺</div>
+					<h1
+						class="text-4xl md:text-6xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-rose-400">
+						Follow for More
 					</h1>
-					<div class="bg-gradient-to-r from-cyan-900/30 to-fuchsia-900/30 border-2 border-cyan-400/50 rounded-2xl p-8 mb-8">
-						<p class="text-lg md:text-2xl text-gray-300">Follow official GST releases • Share this briefing with your team</p>
+					<div
+						class="bg-gradient-to-r from-cyan-900/30 to-fuchsia-900/30 border-2 border-cyan-400/50 rounded-2xl p-8 mb-8">
+						<p class="text-lg md:text-2xl text-gray-300 mb-4">Stay Updated on Financial Reforms</p>
+						<p class="text-sm md:text-base text-gray-400">Get the latest GST updates, tax reforms, and
+							investment insights
+						</p>
 					</div>
 					<div class="flex flex-col sm:flex-row gap-4 justify-center">
-						<a href="../index.html" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300">🏠 Back to Home</a>
-						<button class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300">📤 Share</button>
+						<a href="../index.html"
+							class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300">🏠
+							Back to Home</a>
+						<a href="#"
+							class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300">📧
+							Subscribe</a>
 					</div>
 					<div class="mt-8 text-gray-400">
-						<p class="text-sm">Scroll up to review all sections</p>
+						<p class="text-sm">Thanks for watching! Scroll up to review the GST 2.0 changes</p>
 					</div>
 				</div>
 			</section>
 
 		</div>
 
+		<!-- Footer -->
+		<!-- <footer class="py-8 text-center bg-gray-900">
+			<div class="max-w-4xl mx-auto px-4">
+				<p class="text-gray-500 text-sm md:text-base">
+					YouTube Explained - Financial & Career Insights
+				</p>
+				<p class="text-gray-600 text-xs mt-2">
+					Educational content for better financial understanding
+				</p>
+			</div>
+		</footer> -->
+
+		<!-- Charts: Chart.js & Init -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+		<script>
+			(function initCharts() {
+				const currentCtx = document.getElementById('currentRateChart');
+				if (currentCtx) {
+					new Chart(currentCtx, {
+						type: 'bar',
+						data: {
+							labels: ['Nil', '5%', '12%', '18%', '28%+Cess'],
+							datasets: [{
+								label: 'Before',
+								data: [0, 5, 12, 18, 28],
+								backgroundColor: ['#6b7280', '#10b981', '#f59e0b', '#06b6d4', '#f43f5e'],
+								borderColor: '#0f172a',
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: { legend: { display: false } },
+							responsive: true,
+							scales: {
+								y: { beginAtZero: true, ticks: { color: '#9ca3af' }, grid: { color: '#1f2937' } },
+								x: { ticks: { color: '#9ca3af' }, grid: { display: false } }
+							}
+						}
+					});
+				}
+
+				const newCtx = document.getElementById('newRateChart');
+				if (newCtx) {
+					new Chart(newCtx, {
+						type: 'bar',
+						data: {
+							labels: ['5%', '18%', '40%'],
+							datasets: [{
+								label: 'After',
+								data: [5, 18, 40],
+								backgroundColor: ['#10b981', '#06b6d4', '#f43f5e'],
+								borderColor: '#0f172a',
+								borderWidth: 1
+							}]
+						},
+						options: {
+							plugins: { legend: { display: false } },
+							responsive: true,
+							scales: {
+								y: { beginAtZero: true, ticks: { color: '#9ca3af' }, grid: { color: '#1f2937' } },
+								x: { ticks: { color: '#9ca3af' }, grid: { display: false } }
+							}
+						}
+					});
+				}
+			})();
+		</script>
+
 	</body>
 
 </html>
-
-
