@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description"
+            content="The Dark Side of GST 2.0 — What consumers need to know and how to demand real benefits." />
+        <title>The Dark Side of GST 2.0 ⚠️ — Consumer Alert</title>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+            rel="stylesheet" />
+
+        <style>
+            :root {
+                --bg: #0a0a0a;
+                --muted: #9ca3af;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+
+                .fade-in,
+                .pulse-glow,
+                .warning-glow,
+                .slide-up,
+                .animate-bounce {
+                    animation: none !important;
+                }
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background-color: var(--bg);
+                color: #e5e7eb;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            .scroll-container {
+                scroll-snap-type: y mandatory;
+                overflow-y: auto;
+                height: 100vh;
+            }
+
+            .scroll-section {
+                scroll-snap-align: start;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .fade-in {
+                animation: fadeIn 0.8s ease-out forwards;
+            }
+
+            .scroll-container::-webkit-scrollbar {
+                display: none;
+            }
+
+            .scroll-container {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            @keyframes pulse {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.05);
+                }
+            }
+
+            .pulse-glow {
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(100%);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .slide-up {
+                animation: slideUp 0.8s ease-out forwards;
+            }
+
+            @keyframes warningGlow {
+
+                0%,
+                100% {
+                    box-shadow: 0 0 20px rgba(239, 68, 68, 0.28);
+                }
+
+                50% {
+                    box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+                }
+            }
+
+            .warning-glow {
+                animation: warningGlow 1.5s infinite;
+            }
+
+            /* Print friendly: remove heavy overlays */
+            @media print {
+
+                .warning-glow,
+                .pulse-glow {
+                    box-shadow: none !important;
+                    animation: none !important;
+                }
+
+                body {
+                    background: white !important;
+                    color: black !important;
+                }
+
+                .scroll-container {
+                    height: auto;
+                    overflow: visible;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="bg-black">
+
+        <!-- Back to Home Button -->
+        <a href="../index.html"
+            class="fixed top-4 left-4 z-50 bg-gray-800/80 hover:bg-gray-700/80 text-gray-300 px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 backdrop-blur-sm"
+            aria-label="Back to Home">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" aria-hidden="true" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                </path>
+            </svg>
+            <span class="text-sm font-medium">Back to Home</span>
+        </a>
+
+        <div class="scroll-container" role="main" aria-label="GST 2.0 presentation">
+
+            <!-- Slide 1: Hook -->
+            <section
+                class="scroll-section h-screen flex flex-col justify-center items-center p-6 text-center relative overflow-hidden bg-black"
+                role="region" aria-label="Hook - The Dark Side of GST 2.0">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(239,68,68,0.25),rgba(220,38,38,0.15))] opacity-80"
+                    aria-hidden="true"></div>
+
+                <div class="fade-in z-10 max-w-4xl">
+                    <div class="text-6xl md:text-[7rem] leading-none mb-6 pulse-glow" aria-hidden="true">⚠️</div>
+                    <h1
+                        class="text-4xl md:text-7xl font-black tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500">
+                        The Dark Side of GST 2.0
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-300 mb-6 font-bold">Companies pocket karenge, aapko nahi
+                        milega fayda!
+                    </p>
+
+                    <div class="bg-red-900/30 border-2 border-red-500/50 rounded-2xl p-8 mb-8 warning-glow">
+                        <p class="text-base md:text-lg text-gray-200 max-w-2xl mx-auto">
+                            The GST 2.0 rollout promises a lot, but are consumers really going to benefit? Let's uncover
+                            the hidden
+                            truths.
+                        </p>
+                    </div>
+
+                    <div class="animate-bounce" aria-hidden="true">
+                        <svg class="w-8 h-8 text-red-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: GST 2.0 Simplified -->
+            <section
+                class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900"
+                role="region" aria-label="GST 2.0 - New Slabs">
+                <div class="fade-in w-full max-w-5xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-gray-300">GST 2.0 New Slabs</h2>
+                    <p class="text-lg text-gray-400 mb-12">Simplified structure with 3 main rates</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div
+                            class="bg-gray-900 border border-emerald-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            <div class="text-5xl mb-4" aria-hidden="true">🥦</div>
+                            <h3 class="text-2xl font-bold text-emerald-400 mb-2">5%</h3>
+                            <p class="text-gray-300">Essentials & Daily Goods</p>
+                            <p class="text-sm text-gray-400 mt-2">Food, healthcare, basic items</p>
+                        </div>
+
+                        <div
+                            class="bg-gray-900 border border-blue-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            <div class="text-5xl mb-4" aria-hidden="true">🧴</div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">18%</h3>
+                            <p class="text-gray-300">Daily Goods & Services</p>
+                            <p class="text-sm text-gray-400 mt-2">Most consumer products</p>
+                        </div>
+
+                        <div
+                            class="bg-gray-900 border border-red-400/40 rounded-2xl p-8 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                            <div class="text-5xl mb-4" aria-hidden="true">🚬🚗</div>
+                            <h3 class="text-2xl font-bold text-red-400 mb-2">40%</h3>
+                            <p class="text-gray-300">Luxury & Sin Items</p>
+                            <p class="text-sm text-gray-400 mt-2">Tobacco, luxury cars, gaming</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-gray-900/80 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-xl font-bold text-gray-300 mb-4">Rate Comparison Chart</h3>
+                        <canvas id="gstSlabsChart" class="w-full h-64" aria-label="GST slabs chart" role="img"></canvas>
+                        <p class="text-xs text-gray-400 mt-3">Visual representation of the new GST structure</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Govt & Brands Promise -->
+            <section
+                class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-900"
+                role="region" aria-label="Government and Brands Promise">
+                <div class="fade-in w-full max-w-4xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-gray-300">What They Claim</h2>
+                    <p class="text-lg text-gray-400 mb-12">Government & Brands Promise</p>
+
+                    <div class="bg-gray-900 rounded-2xl p-8 mb-8 shadow-lg">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4" aria-hidden="true">🏛️</div>
+                                <h3 class="text-xl font-bold text-blue-400 mb-4">Government Says</h3>
+                                <p class="text-gray-300">"Benefits must reach consumers"</p>
+                                <p class="text-sm text-gray-400 mt-2">Price reductions guaranteed</p>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="text-6xl mb-4" aria-hidden="true">🏪</div>
+                                <h3 class="text-xl font-bold text-green-400 mb-4">FMCG Brands Promise</h3>
+                                <p class="text-gray-300">Amul, HUL, Britannia → "Price cuts coming soon"</p>
+                                <p class="text-sm text-gray-400 mt-2">Major brands committing to reductions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-900/20 border-2 border-yellow-400 rounded-2xl p-6 mb-8">
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <div class="text-4xl" aria-hidden="true">📰</div>
+                            <h3 class="text-xl font-bold text-yellow-400">News Headlines</h3>
+                            <div class="text-4xl" aria-hidden="true">👀</div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
+                            <div class="bg-gray-800/60 p-4 rounded-lg italic" aria-hidden="true">"GST 2.0 to bring
+                                relief to
+                                consumers"</div>
+                            <div class="bg-gray-800/60 p-4 rounded-lg italic" aria-hidden="true">"Brands promise price
+                                cuts post GST
+                                changes"</div>
+                            <div class="bg-gray-800/60 p-4 rounded-lg italic" aria-hidden="true">"Government ensures
+                                benefit reaches
+                                end consumer"</div>
+                            <div class="bg-gray-800/60 p-4 rounded-lg italic" aria-hidden="true">"Historic reform for
+                                consumer welfare"
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-900/20 border-2 border-green-400 rounded-xl p-4 inline-block"
+                        aria-hidden="true">
+                        <p class="text-green-400 font-bold flex items-center gap-2">
+                            <span class="text-2xl">✅</span>
+                            Sounds Good? 👀
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Reality Check -->
+            <section
+                class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center bg-gray-800"
+                role="region" aria-label="Reality Check">
+                <div class="fade-in w-full max-w-6xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white">Ground Reality 😑</h2>
+                    <p class="text-lg text-gray-400 mb-12">Promise vs Reality with numbers</p>
+
+                    <!-- Insurance Premiums -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">💸 Insurance Premiums</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-900/20 border-2 border-green-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">✅</div>
+                                <h4 class="text-lg font-bold text-green-400 mb-2">PROMISE</h4>
+                                <p class="text-gray-300 font-semibold">GST reduced to 0%</p>
+                                <p class="text-2xl font-bold text-green-400">18% savings expected</p>
+                                <p class="text-sm text-gray-400 mt-2">₹5,000 premium → ₹4,100</p>
+                            </div>
+                            <div class="bg-red-900/20 border-2 border-red-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">❌</div>
+                                <h4 class="text-lg font-bold text-red-400 mb-2">REALITY</h4>
+                                <p class="text-gray-300 font-semibold">Premiums unchanged</p>
+                                <p class="text-2xl font-bold text-red-400">0% savings</p>
+                                <p class="text-sm text-gray-400 mt-2">₹5,000 premium → ₹5,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FMCG Products -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">🥛 FMCG Daily Essentials</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-900/20 border-2 border-green-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">✅</div>
+                                <h4 class="text-lg font-bold text-green-400 mb-2">PROMISE</h4>
+                                <p class="text-gray-300 font-semibold">GST: 18% → 5%</p>
+                                <p class="text-2xl font-bold text-green-400">~13% price reduction</p>
+                                <p class="text-sm text-gray-400 mt-2">₹100 product → ₹87</p>
+                            </div>
+                            <div class="bg-red-900/20 border-2 border-red-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">❌</div>
+                                <h4 class="text-lg font-bold text-red-400 mb-2">REALITY</h4>
+                                <p class="text-gray-300 font-semibold">Old stock at 18% GST</p>
+                                <p class="text-2xl font-bold text-red-400">No immediate savings</p>
+                                <p class="text-sm text-gray-400 mt-2">₹100 product → ₹100</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Electronics -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">📱 Electronics & Appliances</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-900/20 border-2 border-green-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">✅</div>
+                                <h4 class="text-lg font-bold text-green-400 mb-2">PROMISE</h4>
+                                <p class="text-gray-300 font-semibold">GST: 18% → 5%</p>
+                                <p class="text-2xl font-bold text-green-400">13% cheaper</p>
+                                <p class="text-sm text-gray-400 mt-2">₹50,000 laptop → ₹43,500</p>
+                            </div>
+                            <div class="bg-red-900/20 border-2 border-red-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">❌</div>
+                                <h4 class="text-lg font-bold text-red-400 mb-2">REALITY</h4>
+                                <p class="text-gray-300 font-semibold">Dealers cutting margins</p>
+                                <p class="text-2xl font-bold text-red-400">Fake "GST savings"</p>
+                                <p class="text-sm text-gray-400 mt-2">₹50,000 laptop → ₹48,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">🛎️ Services & Dining</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-green-900/20 border-2 border-green-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">✅</div>
+                                <h4 class="text-lg font-bold text-green-400 mb-2">PROMISE</h4>
+                                <p class="text-gray-300 font-semibold">GST: 18% → 5%</p>
+                                <p class="text-2xl font-bold text-green-400">13% savings</p>
+                                <p class="text-sm text-gray-400 mt-2">₹1,000 restaurant bill → ₹870</p>
+                            </div>
+                            <div class="bg-red-900/20 border-2 border-red-500/50 rounded-2xl p-6">
+                                <div class="text-3xl mb-3" aria-hidden="true">❌</div>
+                                <h4 class="text-lg font-bold text-red-400 mb-2">REALITY</h4>
+                                <p class="text-gray-300 font-semibold">Kirana stores lag behind</p>
+                                <p class="text-2xl font-bold text-red-400">No tech for billing</p>
+                                <p class="text-sm text-gray-400 mt-2">₹1,000 bill → ₹1,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 bg-red-900/30 border-2 border-red-500/50 rounded-2xl p-8">
+                        <div class="text-4xl mb-4" aria-hidden="true">⚠️</div>
+                        <p class="text-xl font-bold text-red-400">The ₹1.5 Lakh Crore Question</p>
+                        <p class="text-gray-300 mt-2">Government claims ₹1.5 lakh crore benefit for consumers, but where
+                            is it going?</p>
+                        <div class="grid md:grid-cols-3 gap-4 mt-6 text-sm">
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <p class="text-green-400 font-bold">₹1.5L expected savings</p>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <p class="text-red-400 font-bold">₹0L reaching consumers</p>
+                            </div>
+                            <div class="bg-gray-700/50 p-4 rounded-lg">
+                                <p class="text-yellow-400 font-bold">₹1.5L pocketed by companies?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: What's Next? -->
+            <section
+                class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center relative bg-black"
+                role="region" aria-label="What's next - Your action plan">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(234,179,8,0.18),rgba(0,0,0,0.8))] opacity-90"
+                    aria-hidden="true"></div>
+
+                <div class="fade-in z-10 w-full max-w-5xl">
+                    <div class="text-6xl mb-6" aria-hidden="true">🚀</div>
+                    <h1
+                        class="text-4xl md:text-6xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-orange-500">
+                        What's Next?
+                    </h1>
+                    <p class="text-lg md:text-2xl text-gray-300 mb-12">Your action plan to claim GST 2.0 benefits</p>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-yellow-900/20 border-2 border-yellow-400/50 rounded-2xl p-8">
+                            <div class="text-4xl mb-4" aria-hidden="true">🧾</div>
+                            <h3 class="text-xl font-bold text-yellow-400 mb-4">Immediate Actions</h3>
+                            <div class="text-left space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <div class="text-green-400 font-bold">1.</div>
+                                    <div>
+                                        <p class="text-gray-300 font-semibold">Check Your Bills After Sep 22</p>
+                                        <p class="text-sm text-gray-400">Verify GST changes on receipts</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="text-green-400 font-bold">2.</div>
+                                    <div>
+                                        <p class="text-gray-300 font-semibold">Demand Price Reductions</p>
+                                        <p class="text-sm text-gray-400">Ask retailers to pass on GST savings</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <div class="text-green-400 font-bold">3.</div>
+                                    <div>
+                                        <p class="text-gray-300 font-semibold">Reject Fake Discounts</p>
+                                        <p class="text-sm text-gray-400">Don't accept marketing gimmicks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-orange-900/20 border-2 border-orange-400/50 rounded-2xl p-8">
+                            <div class="text-4xl mb-4" aria-hidden="true">🇮🇳</div>
+                            <h3 class="text-xl font-bold text-orange-400 mb-4">Remember This</h3>
+                            <div class="text-center">
+                                <p class="text-2xl md:text-3xl font-bold text-white mb-4">
+                                    GST 2.0 ka fayda<br />
+                                    <span class="text-orange-400">AAPKA hai</span>,<br />
+                                    <span class="text-red-400">companies ka nahi!</span>
+                                </p>
+                                <div class="grid grid-cols-2 gap-4 mt-6">
+                                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4">
+                                        <div class="text-3xl mb-2" aria-hidden="true">🤑</div>
+                                        <p class="text-sm text-gray-300">Don't let companies keep your GST savings</p>
+                                    </div>
+                                    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4">
+                                        <div class="text-3xl mb-2" aria-hidden="true">🤝</div>
+                                        <p class="text-sm text-gray-300">Demand transparency in pricing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-900/30 border-2 border-red-500/50 rounded-2xl p-8 mb-8">
+                        <div class="text-4xl mb-4" aria-hidden="true">⚠️</div>
+                        <p class="text-lg md:text-2xl text-gray-300 mb-4">Stay vigilant and ensure you get the GST 2.0
+                            benefits you're entitled to</p>
+                        <p class="text-sm md:text-base text-gray-400">Don't let companies pocket the savings that should
+                            reach you</p>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-r from-orange-900/30 to-red-900/30 border-2 border-orange-400/50 rounded-2xl p-6 mb-8">
+                        <p class="text-lg font-bold text-orange-400">GST 2.0 Implementation: September 22, 2025</p>
+                        <p class="text-gray-400 mt-2">Stay alert and ensure you benefit from this reform</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button id="shareBtn" type="button"
+                            class="bg-red-600 hover:bg-red-700 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+                            aria-label="Share this alert">📱 Share This Alert</button>
+                        <a href="../index.html"
+                            class="bg-yellow-600 hover:bg-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+                            aria-label="Back to home">🏠 Back to Home</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Follow for More -->
+            <section
+                class="scroll-section min-h-screen flex flex-col justify-center items-center p-6 text-center relative bg-black"
+                role="region" aria-label="Follow for more content">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/30 to-black"
+                    aria-hidden="true"></div>
+
+                <div class="fade-in z-10 w-full max-w-4xl">
+                    <div class="text-6xl mb-6" aria-hidden="true">📺</div>
+                    <h1
+                        class="text-4xl md:text-6xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-rose-400">
+                        Follow for More
+                    </h1>
+
+                    <div
+                        class="bg-gradient-to-r from-cyan-900/30 to-fuchsia-900/30 border-2 border-cyan-400/50 rounded-2xl p-8 mb-8">
+                        <p class="text-lg md:text-2xl text-gray-300 mb-4">Want more financial education like this?</p>
+                        <p class="text-sm md:text-base text-gray-400">Stay updated with the latest consumer alerts and
+                            money-saving tips</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                            <div class="text-5xl mb-4" aria-hidden="true">📱</div>
+                            <h3 class="text-lg font-bold text-cyan-400 mb-2">Social Media</h3>
+                            <p class="text-gray-300">Follow for daily financial tips</p>
+                            <p class="text-sm text-gray-400 mt-2">@smart.moneyx</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
+                            <div class="text-5xl mb-4" aria-hidden="true">🔔</div>
+                            <h3 class="text-lg font-bold text-fuchsia-400 mb-2">Notifications</h3>
+                            <p class="text-gray-300">Get alerts on new videos</p>
+                            <p class="text-sm text-gray-400 mt-2">Subscribe & hit the bell</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="../index.html"
+                            class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+                            aria-label="Back to home">🏠 Back to Home</a>
+                        <button type="button"
+                            class="bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
+                            aria-label="Subscribe">📧 Subscribe for More</button>
+                    </div>
+
+                    <div class="mt-8 text-gray-400">
+                        <p class="text-sm">Thanks for watching! Stay informed, stay ahead.</p>
+                        <p class="text-xs mt-2">#FinancialEducation #ConsumerRights #GST2Point0</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Charts: Chart.js & Init -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                (function initCharts() {
+                    const slabsCtx = document.getElementById('gstSlabsChart');
+                    if (slabsCtx && window.Chart) {
+                        new Chart(slabsCtx, {
+                            type: 'bar',
+                            data: {
+                                labels: ['5%', '18%', '40%'],
+                                datasets: [{
+                                    label: 'GST Rate',
+                                    data: [5, 18, 40],
+                                    backgroundColor: ['#10b981', '#3b82f6', '#ef4444'],
+                                    borderColor: '#0f172a',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                plugins: { legend: { display: false } },
+                                responsive: true,
+                                scales: {
+                                    y: { beginAtZero: true, ticks: { color: '#e5e7eb' }, grid: { color: '#111827' } },
+                                    x: { ticks: { color: '#e5e7eb' }, grid: { display: false } }
+                                }
+                            }
+                        });
+                    }
+                })();
+
+                // share button: simple copy to clipboard for now
+                const shareBtn = document.getElementById('shareBtn');
+                if (shareBtn) {
+                    shareBtn.addEventListener('click', function () {
+                        const text = 'Heads up — GST 2.0 rolling out on Sep 22, 2025. Check your bills and demand real savings!';
+                        if (navigator.share) {
+                            navigator.share({ title: 'GST 2.0 Alert', text }).catch(() => { /* ignore */ });
+                        } else if (navigator.clipboard) {
+                            navigator.clipboard.writeText(text).then(() => alert('Alert text copied to clipboard!'));
+                        } else {
+                            alert('Copy this: ' + text);
+                        }
+                    });
+                }
+            });
+        </script>
+
+    </body>
+
+</html>
