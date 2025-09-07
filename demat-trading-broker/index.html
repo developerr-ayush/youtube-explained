@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stock Market Entry: Demat + Trading + Broker! 📈</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            @import "tailwindcss";
+
+            body {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+                min-height: 100vh;
+            }
+
+            .content-card {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .highlight-card {
+                backdrop-filter: blur(10px);
+                background: rgba(34, 197, 94, 0.1);
+                border: 2px solid rgba(34, 197, 94, 0.3);
+            }
+
+            .gradient-text {
+                background: linear-gradient(45deg, #06b6d4, #3b82f6, #8b5cf6, #ec4899);
+                background-size: 400% 400%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: gradient 3s ease infinite;
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            .float {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .ticket-transform {
+                animation: ticketToCard 3s ease-in-out;
+            }
+
+            @keyframes ticketToCard {
+                0% {
+                    transform: rotateY(0deg);
+                }
+
+                50% {
+                    transform: rotateY(90deg);
+                }
+
+                100% {
+                    transform: rotateY(0deg);
+                }
+            }
+
+            .locker-open {
+                animation: lockerDoor 2s ease-in-out;
+            }
+
+            @keyframes lockerDoor {
+                0% {
+                    transform: rotateY(0deg);
+                }
+
+                50% {
+                    transform: rotateY(-90deg);
+                }
+
+                100% {
+                    transform: rotateY(0deg);
+                }
+            }
+
+            .coin-drop {
+                animation: coinFall 2s ease-in-out infinite;
+            }
+
+            @keyframes coinFall {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(20px);
+                }
+            }
+
+            .arrow-flow {
+                animation: arrowPulse 2s ease-in-out infinite;
+            }
+
+            @keyframes arrowPulse {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                    opacity: 0.7;
+                }
+
+                50% {
+                    transform: scale(1.2);
+                    opacity: 1;
+                }
+            }
+
+            .profit-bar {
+                animation: profitGrow 3s ease-in-out;
+            }
+
+            @keyframes profitGrow {
+                0% {
+                    height: 20%;
+                }
+
+                100% {
+                    height: 100%;
+                }
+            }
+
+            .magnifier {
+                animation: magnify 2s ease-in-out infinite;
+            }
+
+            @keyframes magnify {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.1);
+                }
+            }
+        </style>
+    </head>
+
+    <body class="text-white overflow-x-hidden">
+        <!-- HOOK Section (0-5s) -->
+        <section class="min-h-screen flex items-center justify-center px-4" data-aos="fade-in">
+            <div class="text-center">
+                <div class="text-6xl md:text-8xl font-bold mb-8 float">🎟️</div>
+                <div class="text-3xl md:text-5xl font-bold mb-6">Stock Market Mein Entry Ka Asli Ticket Kya Hai?</div>
+                <div class="text-2xl md:text-4xl font-semibold mb-8 gradient-text">IPO Nahi… Demat Aur Trading Account!
+                </div>
+
+                <div class="ticket-transform bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg p-6 max-w-md mx-auto"
+                    data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-4xl mb-2">🎟️</div>
+                    <div class="text-lg font-bold text-black">ENTRY TICKET</div>
+                    <div class="text-sm text-black/80">Demat + Trading</div>
+                </div>
+
+                <div class="text-xl font-bold text-blue-400 mt-8">
+                    Entry Ticket 🎟 = Demat + Trading
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1 (5-10s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-5xl w-full" data-aos="fade-right">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🔒</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400">Demat Account Basically</h2>
+                    <p class="text-xl font-semibold">Ek Digital Locker Hai Jaha Aapke Shares Safe Rehte Hain</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-left" data-aos-delay="300">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4 locker-open" id="lockerDoor">🔒</div>
+                            <p class="text-lg font-semibold">Digital Safe</p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="600">
+                        <div class="bg-blue-500/20 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-blue-400 mb-4">Inside Your Demat:</h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">🏦</div>
+                                    <span>HDFC Bank Shares</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">📱</div>
+                                    <span>Reliance Shares</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">💻</div>
+                                    <span>Infosys Shares</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">🚗</div>
+                                    <span>Tata Motors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-blue-400">
+                    Demat = Digital Locker
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 (10-15s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-5xl w-full" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📱</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-400">Trading Account</h2>
+                    <p class="text-xl font-semibold">Ek Platform Hai Jaha Aap Shares Kharidte Aur Bechte Ho</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <div class="bg-green-500/20 rounded-lg p-6 text-center">
+                            <div class="text-6xl mb-4">📱</div>
+                            <h3 class="text-lg font-bold text-green-400 mb-4">Trading App</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-green-600 rounded-lg p-4">
+                                    <div class="text-2xl mb-2">🟢</div>
+                                    <div class="font-bold">BUY</div>
+                                    <div class="text-sm">Shares Purchase</div>
+                                </div>
+                                <div class="bg-red-600 rounded-lg p-4">
+                                    <div class="text-2xl mb-2">🔴</div>
+                                    <div class="font-bold">SELL</div>
+                                    <div class="text-sm">Shares Sale</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-delay="600">
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="text-4xl">📊</div>
+                                <div>
+                                    <div class="font-bold">Live Market Data</div>
+                                    <div class="text-sm text-gray-300">Real-time prices</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="text-4xl">⚡</div>
+                                <div>
+                                    <div class="font-bold">Instant Orders</div>
+                                    <div class="text-sm text-gray-300">Quick execution</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="text-4xl">📈</div>
+                                <div>
+                                    <div class="font-bold">Portfolio Tracking</div>
+                                    <div class="text-sm text-gray-300">Watch your investments</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-green-400">
+                    Trading = Buy/Sell
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 3 (15-20s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-left">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🔄</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-purple-400">Matlab Trading Account Se Aap Deal
+                        Karte Ho</h2>
+                    <p class="text-xl font-semibold">Aur Demat Mein Shares Store Hote Hain</p>
+                </div>
+
+                <div class="flex justify-center items-center space-x-8 mb-8" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">📱</div>
+                        <h3 class="text-lg font-bold text-green-400">Trading Account</h3>
+                        <p class="text-sm">Action Platform</p>
+                    </div>
+
+                    <div class="text-4xl text-yellow-400 arrow-flow">→</div>
+
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">🔒</div>
+                        <h3 class="text-lg font-bold text-blue-400">Demat Account</h3>
+                        <p class="text-sm">Storage Locker</p>
+                    </div>
+                </div>
+
+                <div class="bg-purple-500/20 rounded-lg p-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-center">
+                        <h3 class="text-lg font-bold text-purple-400 mb-4">The Complete Flow:</h3>
+                        <div class="flex justify-center items-center space-x-4 text-sm">
+                            <span>📱 Trading App</span>
+                            <span class="text-yellow-400">→</span>
+                            <span>🟢 BUY Order</span>
+                            <span class="text-yellow-400">→</span>
+                            <span>🔒 Shares in Demat</span>
+                            <span class="text-yellow-400">→</span>
+                            <span>💰 Profit/Loss</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-purple-400">
+                    Action → Storage
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 4 (20-25s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-4xl w-full text-center" data-aos="fade-up">
+                <div class="text-6xl mb-6">🔍</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-orange-400">Ab Sawaal – In Dono Ko Manage Kaun Karta
+                    Hai?</h2>
+                <p class="text-xl font-semibold mb-8">Answer: Broker</p>
+
+                <div class="relative" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-8xl mb-4">👨‍💼</div>
+                    <div class="absolute -top-2 -right-2 text-4xl magnifier">🔍</div>
+                    <div class="text-4xl font-bold gradient-text">BROKER</div>
+                    <p class="text-lg mt-4">The Middleman</p>
+                </div>
+
+                <div class="text-xl font-bold text-orange-400 mt-6">
+                    Broker = Middleman
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 5 (25-30s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-5xl w-full" data-aos="fade-right">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🏢</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400">Broker Aapko Platform Deta Hai</h2>
+                    <p class="text-xl font-semibold">Trade Karne Ke Liye</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-left" data-aos-delay="300">
+                        <div class="bg-blue-500/20 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-blue-400 mb-4">Broker Provides:</h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">📱</div>
+                                    <span>Trading App</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">🔒</div>
+                                    <span>Demat Account</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">📊</div>
+                                    <span>Market Research</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <div class="text-2xl">📞</div>
+                                    <span>Customer Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="600">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4">🏢</div>
+                            <div class="text-4xl font-bold gradient-text">BROKER</div>
+                            <p class="text-lg mt-4">Your Trading Partner</p>
+                            <p class="text-lg">Complete Solution Provider</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-blue-400">
+                    Broker = Platform
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 6 (30-35s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-left">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4 coin-drop">💰</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">Aur Har Trade Pe Broker Apna Charge
+                        Leta Hai</h2>
+                    <p class="text-xl font-semibold">Jise Bolte Hain Brokerage</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4">💰</div>
+                            <div class="text-4xl font-bold text-red-400">BROKERAGE</div>
+                            <p class="text-lg mt-4">Transaction Fee</p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-delay="600">
+                        <div class="bg-yellow-500/20 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-yellow-400 mb-4">Brokerage Fee Examples:</h3>
+                            <div class="space-y-3 text-sm">
+                                <div class="flex justify-between">
+                                    <span>Equity Delivery:</span>
+                                    <span>₹0 - ₹20 per trade</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Intraday:</span>
+                                    <span>₹0.01% - ₹0.05%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>F&O:</span>
+                                    <span>₹20 - ₹100 per lot</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Currency:</span>
+                                    <span>₹0.01% - ₹0.05%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-yellow-400">
+                    Brokerage Fee 💸
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 7 (35-40s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📈📉</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-400">Zyada Brokerage = Kam Profit</h2>
+                    <p class="text-xl font-semibold">Isliye Smart Brokers Choose Karna Important Hai</p>
+                </div>
+
+                <div class="mb-8" data-aos="zoom-in" data-aos-delay="300">
+                    <canvas id="brokerageChart" class="w-full"></canvas>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-red-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">📉</div>
+                        <h3 class="text-lg font-bold text-red-400">High Brokerage</h3>
+                        <p class="text-sm">₹100 per trade</p>
+                        <p class="text-sm">Lower profits</p>
+                    </div>
+
+                    <div class="bg-green-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">📈</div>
+                        <h3 class="text-lg font-bold text-green-400">Low Brokerage</h3>
+                        <p class="text-sm">₹0 per trade</p>
+                        <p class="text-sm">Higher profits</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-green-400">
+                    Low Brokerage = High Profit
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 8 (40-45s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-5xl w-full text-center" data-aos="fade-down">
+                <div class="text-6xl mb-6">🎟️</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-400">Toh Stock Market Ka Entry Ticket Clear Hai
+                </h2>
+                <p class="text-xl font-semibold mb-8">Demat + Trading + Broker</p>
+
+                <div class="flex justify-center items-center space-x-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="bg-blue-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">🔒</div>
+                        <h3 class="text-lg font-bold text-blue-400">Demat</h3>
+                        <p class="text-sm">Digital Locker</p>
+                    </div>
+
+                    <div class="text-4xl text-yellow-400">+</div>
+
+                    <div class="bg-green-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">📱</div>
+                        <h3 class="text-lg font-bold text-green-400">Trading</h3>
+                        <p class="text-sm">Buy/Sell Platform</p>
+                    </div>
+
+                    <div class="text-4xl text-yellow-400">+</div>
+
+                    <div class="bg-purple-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">👨‍💼</div>
+                        <h3 class="text-lg font-bold text-purple-400">Broker</h3>
+                        <p class="text-sm">Middleman</p>
+                    </div>
+                </div>
+
+                <div class="text-xl font-bold text-green-400 mt-6">
+                    Entry Set ✅
+                </div>
+        </section>
+        </section>
+
+        <!-- CTA Question (45-50s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-4xl w-full text-center" data-aos="zoom-in">
+                <div class="text-6xl mb-6">🤔</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Aap Batao – Demat Account Kholne Ke Liye
+                </h2>
+                <p class="text-xl font-semibold mb-8">Aapne Kaunsa Broker Choose Kiya?</p>
+
+                <div class="text-2xl font-bold text-blue-400">
+                    Broker Choice? 🤔
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Comment (50-55s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-6xl w-full text-center" data-aos="fade-up">
+                <div class="text-6xl mb-6">💬</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-400">Comment Mein Likho</h2>
+                <p class="text-xl font-semibold mb-8">Zerodha, Groww Ya Koi Aur?</p>
+
+                <div class="grid md:grid-cols-3 gap-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="bg-blue-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">Z</div>
+                        <h3 class="text-lg font-bold text-blue-400">Zerodha</h3>
+                        <p class="text-sm">Popular Choice</p>
+                    </div>
+
+                    <div class="bg-green-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">G</div>
+                        <h3 class="text-lg font-bold text-green-400">Groww</h3>
+                        <p class="text-sm">User Friendly</p>
+                    </div>
+
+                    <div class="bg-purple-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">U</div>
+                        <h3 class="text-lg font-bold text-purple-400">Upstox</h3>
+                        <p class="text-sm">Fast & Reliable</p>
+                    </div>
+                </div>
+
+                <div class="text-xl font-bold text-yellow-400 mt-6">
+                    Your Broker? 👇
+                </div>
+        </section>
+        </section>
+
+        <!-- CTA Follow (55-60s) -->
+        <section class="min-h-screen flex items-center justify-center px-4">
+            <div class="text-center" data-aos="zoom-in">
+                <div class="text-6xl mb-6">🚀</div>
+                <div class="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+                    Stock Market Ke Simple Explainers Ke Liye
+                </div>
+                <div class="text-2xl font-semibold mb-8">
+                    Follow Karo @smart.moneyx!
+                </div>
+                <div class="text-4xl font-bold mb-4">Follow @smart.moneyx 🚀</div>
+
+                <div class="flex justify-center items-center space-x-8 mt-8">
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">📚</div>
+                        <p class="text-lg font-semibold">Learn Trading</p>
+                    </div>
+                    <div class="text-4xl">+</div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">📈</div>
+                        <p class="text-lg font-semibold">Stay Updated</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Brokerage Comparison Chart
+            const ctx = document.getElementById('brokerageChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['High Brokerage', 'Low Brokerage'],
+                    datasets: [{
+                        label: 'Profit After Fees',
+                        data: [70, 90],
+                        backgroundColor: [
+                            'rgba(239, 68, 68, 0.8)',
+                            'rgba(34, 197, 94, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgba(239, 68, 68, 1)',
+                            'rgba(34, 197, 94, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white',
+                                font: { size: 14 }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                color: 'white',
+                                callback: function (value) {
+                                    return value + '%';
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: 'white'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Locker animation
+            setTimeout(() => {
+                document.getElementById('lockerDoor').innerHTML = '🔓';
+            }, 1000);
+
+            // Ticket transformation
+            setTimeout(() => {
+                const ticket = document.querySelector('.ticket-transform');
+                ticket.innerHTML = `
+                <div class="text-4xl mb-2">🎫</div>
+                <div class="text-lg font-bold text-black">ENTRY PASSES</div>
+                <div class="text-sm text-black/80">Demat + Trading + Broker</div>
+            `;
+            }, 1500);
+        </script>
+    </body>
+
+</html>

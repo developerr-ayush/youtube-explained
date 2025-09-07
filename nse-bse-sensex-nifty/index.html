@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NSE, BSE, Sensex, Nifty Explained! 📈</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            @import "tailwindcss";
+
+            body {
+                background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+                min-height: 100vh;
+            }
+
+            .content-card {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .highlight-card {
+                backdrop-filter: blur(10px);
+                background: rgba(34, 197, 94, 0.1);
+                border: 2px solid rgba(34, 197, 94, 0.3);
+            }
+
+            .gradient-text {
+                background: linear-gradient(45deg, #06b6d4, #3b82f6, #8b5cf6, #ec4899);
+                background-size: 400% 400%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: gradient 3s ease infinite;
+            }
+
+            @keyframes gradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            .float {
+                animation: float 3s ease-in-out infinite;
+            }
+
+            @keyframes float {
+
+                0%,
+                100% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .news-flash {
+                animation: newsFlash 2s ease-in-out infinite;
+            }
+
+            @keyframes newsFlash {
+
+                0%,
+                100% {
+                    opacity: 0.7;
+                    transform: scale(1);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1.05);
+                }
+            }
+
+            .trading-floor {
+                animation: tradingTransition 3s ease-in-out;
+            }
+
+            @keyframes tradingTransition {
+                0% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+
+                50% {
+                    transform: translateX(-20px);
+                    opacity: 0.5;
+                }
+
+                100% {
+                    transform: translateX(-40px);
+                    opacity: 0;
+                }
+            }
+
+            .timeline-bar {
+                animation: timelineGrow 4s ease-in-out;
+            }
+
+            @keyframes timelineGrow {
+                0% {
+                    width: 0%;
+                }
+
+                100% {
+                    width: 100%;
+                }
+            }
+
+            .market-arrow {
+                animation: arrowBounce 2s ease-in-out infinite;
+            }
+
+            @keyframes arrowBounce {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .pulse-red {
+                animation: pulseRed 2s infinite;
+            }
+
+            @keyframes pulseRed {
+
+                0%,
+                100% {
+                    background-color: rgba(239, 68, 68, 0.1);
+                }
+
+                50% {
+                    background-color: rgba(239, 68, 68, 0.3);
+                }
+            }
+
+            .company-logo {
+                animation: logoFadeIn 1s ease-in-out;
+                animation-fill-mode: both;
+            }
+        </style>
+    </head>
+
+    <body class="text-white overflow-x-hidden">
+        <!-- HOOK Section (0-5s) -->
+        <section class="min-h-screen flex items-center justify-center px-4" data-aos="fade-in">
+            <div class="text-center">
+                <div class="text-4xl md:text-6xl font-bold mb-8 float">🤔</div>
+                <div class="text-3xl md:text-5xl font-bold mb-6">News Mein Sensex Aur Nifty Sunte Ho</div>
+                <div class="text-2xl md:text-4xl font-semibold mb-8 gradient-text">But Samajhte Ho Kya Hota Hai?</div>
+
+                <div class="space-y-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="news-flash bg-red-500/20 rounded-lg p-4 max-w-md mx-auto">
+                        <div class="text-lg font-bold text-red-400">BREAKING NEWS</div>
+                        <div class="text-xl">Sensex Down 500 Points! 📉</div>
+                    </div>
+                    <div class="news-flash bg-yellow-500/20 rounded-lg p-4 max-w-md mx-auto"
+                        style="animation-delay: 0.5s">
+                        <div class="text-lg font-bold text-yellow-400">MARKET UPDATE</div>
+                        <div class="text-xl">Nifty Crashes Below 18,000! ⚠️</div>
+                    </div>
+                </div>
+
+                <div class="text-xl font-bold text-blue-400 mt-8">
+                    Sensex? Nifty? NSE? BSE?
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1 (5-10s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-5xl w-full" data-aos="fade-right">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🏢🏢</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400">Sabse Pehle – NSE Aur BSE</h2>
+                    <p class="text-xl font-semibold">Ye Dono Hain India Ke Stock Exchanges</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-left" data-aos-delay="300">
+                        <div class="bg-blue-500/20 rounded-lg p-6 text-center">
+                            <div class="text-6xl mb-4">🇮🇳</div>
+                            <h3 class="text-2xl font-bold text-blue-400 mb-2">NSE</h3>
+                            <p class="text-lg">National Stock Exchange</p>
+                            <p class="text-sm text-gray-300">Modern & Digital</p>
+                            <div class="text-4xl font-bold text-blue-400 mt-2">NSE</div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="500">
+                        <div class="bg-green-500/20 rounded-lg p-6 text-center">
+                            <div class="text-6xl mb-4">🇮🇳</div>
+                            <h3 class="text-2xl font-bold text-green-400 mb-2">BSE</h3>
+                            <p class="text-lg">Bombay Stock Exchange</p>
+                            <p class="text-sm text-gray-300">Traditional & Established</p>
+                            <div class="text-4xl font-bold text-green-400 mt-2">BSE</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-yellow-400">
+                    NSE 🆚 BSE
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 (10-15s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">🏛️</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-400">Stock Exchange Matlab</h2>
+                    <p class="text-xl font-semibold">Ek Marketplace Jaha Shares Kharide-Beche Jaate Hain</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4 trading-floor" id="tradingFloor">🏛️</div>
+                            <p class="text-lg font-semibold">Traditional Trading Floor</p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-delay="600">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4" id="digitalTrading">💻📊</div>
+                            <p class="text-lg font-semibold">Modern Digital Trading</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-blue-400">
+                    Marketplace of Shares
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 (15-20s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-5xl w-full" data-aos="fade-left">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">⏰</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-purple-400">BSE Purana Hai, 1875 Se</h2>
+                    <p class="text-xl font-semibold">NSE 1990s Mein Aaya, Aur Zyada Modern Aur Digital Hai</p>
+                </div>
+
+                <div class="relative mb-8" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-4 bg-gray-600 rounded-full">
+                        <div class="timeline-bar h-4 bg-gradient-to-r from-green-400 to-blue-400 rounded-full"></div>
+                    </div>
+                    <div class="flex justify-between text-sm mt-2">
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">🏛️</div>
+                            <div class="font-bold text-green-400">1875</div>
+                            <div>BSE Founded</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-2">💻</div>
+                            <div class="font-bold text-blue-400">1992</div>
+                            <div>NSE Founded</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-green-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">🏛️</div>
+                        <h3 class="text-lg font-bold text-green-400">BSE = Old</h3>
+                        <p class="text-sm">Traditional, Established</p>
+                        <p class="text-sm">Physical trading roots</p>
+                    </div>
+
+                    <div class="bg-blue-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">💻</div>
+                        <h3 class="text-lg font-bold text-blue-400">NSE = Modern</h3>
+                        <p class="text-sm">Digital, Fast, Efficient</p>
+                        <p class="text-sm">Electronic trading</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-purple-400">
+                    BSE = Old | NSE = Modern
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 4 (20-25s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-down">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📊📈</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-orange-400">Ab Baat Karte Hain</h2>
+                    <p class="text-xl font-semibold">Sensex Aur Nifty Ki</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-center">
+                        <div class="text-8xl mb-4">📊</div>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-2">Sensex</h3>
+                        <p class="text-lg">BSE ka Index</p>
+                        <div class="text-4xl font-bold text-blue-400">SENSEX</div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-8xl mb-4">📈</div>
+                        <h3 class="text-2xl font-bold text-green-400 mb-2">Nifty</h3>
+                        <p class="text-lg">NSE ka Index</p>
+                        <div class="text-4xl font-bold text-green-400">NIFTY</div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-yellow-400">
+                    Sensex 📊 Nifty
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 (25-30s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-right">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📊</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-blue-400">Sensex = BSE Ka Index</h2>
+                    <p class="text-xl font-semibold">Top 30 Companies Ka Average Performance</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-left" data-aos-delay="300">
+                        <div class="bg-blue-500/20 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-blue-400 mb-4">Top 30 Companies:</h3>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="company-logo">🏦 HDFC Bank</div>
+                                <div class="company-logo" style="animation-delay: 0.1s">📱 Reliance</div>
+                                <div class="company-logo" style="animation-delay: 0.2s">🚗 Tata Motors</div>
+                                <div class="company-logo" style="animation-delay: 0.3s">💻 Infosys</div>
+                                <div class="company-logo" style="animation-delay: 0.4s">🏥 Apollo</div>
+                                <div class="company-logo" style="animation-delay: 0.5s">🏭 Tata Steel</div>
+                                <div class="company-logo" style="animation-delay: 0.6s">☕ Tata Consumer</div>
+                                <div class="company-logo" style="animation-delay: 0.7s">💰 ICICI Bank</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-right" data-aos-delay="600">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4">📊</div>
+                            <div class="text-4xl font-bold gradient-text">SENSEX</div>
+                            <p class="text-lg mt-4">30 Large Companies</p>
+                            <p class="text-lg">BSE Index</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-blue-400">
+                    Sensex = Top 30 (BSE)
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 6 (30-35s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-left">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📈</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-400">Nifty = NSE Ka Index</h2>
+                    <p class="text-xl font-semibold">Top 50 Companies Ka Performance</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div data-aos="fade-right" data-aos-delay="300">
+                        <div class="text-center">
+                            <div class="text-8xl mb-4">🎯</div>
+                            <div class="text-4xl font-bold gradient-text">NIFTY 50</div>
+                            <p class="text-lg mt-4">50 Best Companies</p>
+                            <p class="text-lg">NSE Index</p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-delay="600">
+                        <div class="bg-green-500/20 rounded-lg p-6">
+                            <h3 class="text-lg font-bold text-green-400 mb-4">Nifty50 Companies Include:</h3>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="company-logo">🏦 HDFC Bank</div>
+                                <div class="company-logo" style="animation-delay: 0.1s">📱 Reliance</div>
+                                <div class="company-logo" style="animation-delay: 0.2s">💻 Infosys</div>
+                                <div class="company-logo" style="animation-delay: 0.3s">🚗 Tata Motors</div>
+                                <div class="company-logo" style="animation-delay: 0.4s">☕ Tata Consumer</div>
+                                <div class="company-logo" style="animation-delay: 0.5s">🏭 Tata Steel</div>
+                                <div class="company-logo" style="animation-delay: 0.6s">💰 ICICI Bank</div>
+                                <div class="company-logo" style="animation-delay: 0.7s">🏥 Apollo</div>
+                                <div class="company-logo" style="animation-delay: 0.8s">🚀 Adani</div>
+                                <div class="company-logo" style="animation-delay: 0.9s">⚡ NTPC</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-green-400">
+                    Nifty = Top 50 (NSE)
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 7 (35-40s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-5xl w-full" data-aos="fade-up">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📈📉</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-yellow-400">Indexes Batate Hain</h2>
+                    <p class="text-xl font-semibold">Market Upar Ja Raha Hai Ya Neeche</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 items-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4 market-arrow">⬆️</div>
+                        <h3 class="text-lg font-bold text-green-400">Market Up</h3>
+                        <p class="text-sm">Companies performing well</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">📊</div>
+                        <h3 class="text-lg font-bold text-blue-400">Index Value</h3>
+                        <p class="text-sm">Average performance</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="text-6xl mb-4 market-arrow" style="animation-delay: 1s">⬇️</div>
+                        <h3 class="text-lg font-bold text-red-400">Market Down</h3>
+                        <p class="text-sm">Companies struggling</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-yellow-400">
+                    Market Direction ↑ ↓
+                </div>
+        </section>
+        </section>
+
+        <!-- Section 8 (40-45s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-6xl w-full" data-aos="fade-down">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4">📉</div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-red-400">Toh Jab News Mein Bolte Ho</h2>
+                    <p class="text-xl font-semibold">'Sensex Gira', Matlab Zyada Companies Ka Performance Down Hai</p>
+                </div>
+
+                <div class="mb-8" data-aos="fade-in" data-aos-delay="300">
+                    <canvas id="sensexChart" class="w-full"></canvas>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-red-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">📉</div>
+                        <h3 class="text-lg font-bold text-red-400">Sensex Down</h3>
+                        <p class="text-sm">Multiple companies</p>
+                        <p class="text-sm">performing poorly</p>
+                    </div>
+
+                    <div class="bg-green-500/20 rounded-lg p-4 text-center">
+                        <div class="text-4xl mb-2">📈</div>
+                        <h3 class="text-lg font-bold text-green-400">Sensex Up</h3>
+                        <p class="text-sm">Multiple companies</p>
+                        <p class="text-sm">performing well</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-6 text-xl font-bold text-red-400">
+                    Sensex Down = Companies Down
+                </div>
+        </section>
+        </section>
+
+        <!-- CTA Question (45-50s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="content-card rounded-2xl p-8 max-w-5xl w-full text-center" data-aos="zoom-in">
+                <div class="text-6xl mb-6">🤔</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Ab Bolo – Aapko Lagta Hai</h2>
+                <p class="text-xl font-semibold mb-8">Nifty Follow Karna Zyada Useful Hai Ya Sensex?</p>
+
+                <div class="flex justify-center items-center space-x-8" data-aos="fade-in" data-aos-delay="400">
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">📊</div>
+                        <p class="text-lg font-bold text-blue-400">Sensex</p>
+                        <p class="text-sm">30 Companies</p>
+                    </div>
+                    <div class="text-4xl text-yellow-400">🆚</div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-2">📈</div>
+                        <p class="text-lg font-bold text-green-400">Nifty</p>
+                        <p class="text-sm">50 Companies</p>
+                    </div>
+                </div>
+
+                <div class="text-2xl font-bold text-purple-400 mt-6">
+                    Sensex 🆚 Nifty – Aapka Pick?
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Comment (50-55s) -->
+        <section class="min-h-screen flex items-center justify-center px-4 py-16">
+            <div class="highlight-card rounded-2xl p-8 max-w-4xl w-full text-center" data-aos="fade-up">
+                <div class="text-6xl mb-6">💬</div>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-green-400">Comment Karke Batao</h2>
+                <p class="text-xl font-semibold mb-8">Aap Kaunsa Index Zyada Dekhte Ho?</p>
+
+                <div class="flex justify-center items-center space-x-8" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">📱</div>
+                        <p class="text-lg font-semibold">Share Your Choice</p>
+                    </div>
+                    <div class="text-4xl text-yellow-400">→</div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">👇</div>
+                        <p class="text-lg font-semibold">Comment Below</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Follow (55-60s) -->
+        <section class="min-h-screen flex items-center justify-center px-4">
+            <div class="text-center" data-aos="zoom-in">
+                <div class="text-6xl mb-6">🚀</div>
+                <div class="text-3xl md:text-4xl font-bold mb-6 gradient-text">
+                    Stock Market Ke Easy Explainers Ke Liye
+                </div>
+                <div class="text-2xl font-semibold mb-8">
+                    Follow Karo @smart.moneyx!
+                </div>
+                <div class="text-4xl font-bold mb-4">Follow @smart.moneyx 🚀</div>
+
+                <div class="flex justify-center items-center space-x-8 mt-8">
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">📈</div>
+                        <p class="text-lg font-semibold">Learn Trading</p>
+                    </div>
+                    <div class="text-4xl">+</div>
+                    <div class="text-center">
+                        <div class="text-6xl mb-2">📚</div>
+                        <p class="text-lg font-semibold">Stay Updated</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // Sensex Chart
+            const ctx = document.getElementById('sensexChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                    datasets: [{
+                        label: 'Sensex Performance',
+                        data: [65000, 63500, 62000, 60500, 59000, 57500],
+                        borderColor: 'rgba(239, 68, 68, 1)',
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'white',
+                                font: { size: 14 }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                color: 'white',
+                                callback: function (value) {
+                                    return value.toLocaleString();
+                                }
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                color: 'white'
+                            },
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Trading floor transition animation
+            setTimeout(() => {
+                document.getElementById('digitalTrading').style.opacity = '1';
+                document.getElementById('digitalTrading').style.transform = 'translateX(0)';
+            }, 2000);
+
+            // Timeline animation
+            setTimeout(() => {
+                const timelineBar = document.querySelector('.timeline-bar');
+                timelineBar.style.width = '100%';
+            }, 1000);
+        </script>
+    </body>
+
+</html>
