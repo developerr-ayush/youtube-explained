@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GST Changes September 22 - 5 Things Getting Cheaper! 💸</title>
+
+        <!-- Tailwind CSS v4 -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- AOS Animation Library -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- GSAP Animation Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+        <style>
+            @import "tailwindcss";
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+                min-height: 100vh;
+            }
+
+            .sparkle {
+                animation: sparkle 2s ease-in-out infinite;
+            }
+
+            @keyframes sparkle {
+
+                0%,
+                100% {
+                    opacity: 0;
+                    transform: scale(0.8);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+            }
+
+            .gst-chart {
+                max-width: 350px;
+                margin: 0 auto;
+                height: 280px;
+                position: relative;
+                background: rgba(255, 255, 255, 0.05);
+                border-radius: 12px;
+                padding: 20px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .gst-chart canvas {
+                width: 100% !important;
+                height: 100% !important;
+                max-width: 100%;
+                max-height: 240px;
+            }
+
+            @media (max-width: 768px) {
+                .gst-chart {
+                    max-width: 100%;
+                    height: 300px;
+                    padding: 15px;
+                }
+
+                .gst-chart canvas {
+                    max-height: 260px;
+                }
+            }
+
+            .chart-container {
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+            }
+
+            .chart-container:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            }
+
+            .section-transition {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            .section-active {
+                opacity: 1;
+                transform: translateY(0);
+                transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .price-arrow {
+                animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                40% {
+                    transform: translateY(-10px);
+                }
+
+                60% {
+                    transform: translateY(-5px);
+                }
+            }
+
+            .calendar-zoom {
+                animation: zoomPulse 3s ease-in-out infinite;
+            }
+
+            @keyframes zoomPulse {
+
+                0%,
+                100% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.05);
+                }
+            }
+
+            .montage-item {
+                animation: fadeInScale 0.5s ease-out forwards;
+            }
+
+            .montage-item:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+
+            .montage-item:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .montage-item:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+
+            .montage-item:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+
+            .montage-item:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+
+            @keyframes fadeInScale {
+                from {
+                    opacity: 0;
+                    transform: scale(0.8);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            .cta-button {
+                transition: all 0.3s ease;
+            }
+
+            .cta-button:hover {
+                transform: scale(1.05);
+                box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+            }
+
+            .confetti {
+                animation: confettiFall 2s ease-in-out infinite;
+            }
+
+            @keyframes confettiFall {
+                0% {
+                    transform: translateY(-100vh) rotate(0deg);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+
+    <body class="text-white overflow-x-hidden">
+
+        <!-- Navigation Progress Bar -->
+        <div class="fixed top-0 left-0 w-full h-1 bg-gray-800 z-50">
+            <div class="h-full bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-1000"
+                id="progress-bar"></div>
+        </div>
+
+        <!-- HOOK Section (0-5s) -->
+        <section id="hook" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="mb-8 calendar-zoom">
+                    <div class="relative inline-block">
+                        <div class="bg-red-600 rounded-full p-8 shadow-2xl border-4 border-red-400">
+                            <h1 class="text-6xl font-bold text-white mb-2">22</h1>
+                            <p class="text-xl font-semibold text-red-100">SEPT</p>
+                        </div>
+                        <div class="absolute -top-2 -right-2 sparkle">
+                            <i class="fas fa-star text-yellow-400 text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-2 -left-2 sparkle" style="animation-delay: 0.5s;">
+                            <i class="fas fa-sparkles text-blue-400 text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <h2
+                    class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 bg-clip-text text-transparent">
+                    5 Cheezein Jo Sasti Hongi
+                </h2>
+
+                <div class="flex items-center justify-center space-x-4 text-2xl">
+                    <span class="animate-bounce">🤫</span>
+                    <span class="animate-pulse">💸</span>
+                </div>
+
+                <p class="text-xl text-gray-300 mt-6">Prices DROP hone wale hain!</p>
+            </div>
+        </section>
+
+        <!-- Point 1: Toiletries (5-10s) -->
+        <section id="toiletries" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3
+                        class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                        Bathroom Shelf Special
+                    </h3>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Shampoo, toothpaste, hair oil... sab 18% se crash hoke 5% GST!
+                    </p>
+                    <div class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 rounded-xl shadow-xl">
+                        <p class="text-2xl font-bold text-white">Toiletries: 18% → 5% GST ✨</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="gst-chart chart-container">
+                    <canvas id="toiletriesChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Point 2: Food Haul (10-18s) -->
+        <section id="food" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-6xl mx-auto text-center">
+                <h3
+                    class="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                    Midnight Snacks Revolution
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-500 p-6 rounded-xl shadow-xl mb-6">
+                            <p class="text-2xl font-bold text-white mb-4">Snacks & Faves ↓ Saste! 🍫🧀</p>
+                            <p class="text-lg text-orange-100">Butter, cheese, Maggi, chocolates... 12-18% → 5% GST</p>
+                        </div>
+                        <div class="gst-chart chart-container">
+                            <canvas id="snacksChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="bg-gradient-to-br from-yellow-500 to-amber-500 p-6 rounded-xl shadow-xl mb-6">
+                            <p class="text-2xl font-bold text-white mb-4">Daily Staples = 0% GST 🤯</p>
+                            <p class="text-lg text-yellow-100">Roti, paneer, doodh... Bilkul ZERO!</p>
+                        </div>
+                        <div class="gst-chart chart-container">
+                            <canvas id="staplesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Point 3: Nayi Ride (18-24s) -->
+        <section id="ride" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 p-8 rounded-xl shadow-xl">
+                        <h3 class="text-4xl md:text-5xl font-bold text-white mb-4">Nayi Ride Alert! 🏍️💨</h3>
+                        <p class="text-xl text-indigo-100 mb-6">
+                            Chhoti cars aur scooters under 350cc pe GST massive 28% se gir ke 18%!
+                        </p>
+                        <p class="text-2xl font-bold text-white">Cars & Bikes: 28% → 18% GST</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="gst-chart chart-container">
+                    <canvas id="rideChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Point 4: Ghar Ka Upgrade (24-29s) -->
+        <section id="electronics" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-teal-600 to-cyan-600 p-8 rounded-xl shadow-xl">
+                        <h3 class="text-4xl md:text-5xl font-bold text-white mb-4">Home Upgrade Time 📺❄️</h3>
+                        <p class="text-xl text-teal-100 mb-6">
+                            Woh big-screen TV ya AC jispe kabse nazar thi? Unka bhi GST 28% se drop hoke 18%!
+                        </p>
+                        <p class="text-2xl font-bold text-white">Electronics: 28% → 18% GST</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="gst-chart chart-container">
+                    <canvas id="electronicsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Point 5: Lifestyle Scene (29-35s) -->
+        <section id="lifestyle" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-pink-600 to-rose-600 p-8 rounded-xl shadow-xl">
+                        <h3 class="text-4xl md:text-5xl font-bold text-white mb-4">Self-Care Budget 🧘‍♀️🏨</h3>
+                        <p class="text-xl text-pink-100 mb-6">
+                            Gym membership, salon days, yoga, aur hotel stays under ₹7500... 18% se crash hoke 5%!
+                        </p>
+                        <p class="text-2xl font-bold text-white">Gyms & Hotels: 18% → 5% GST</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="gst-chart chart-container">
+                    <canvas id="lifestyleChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- REALITY CHECK (35-40s) -->
+        <section id="reality-check" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-xl shadow-xl mb-8">
+                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-6">⚠️ REALITY CHECK</h3>
+                    <p class="text-xl text-red-100 mb-6">
+                        GST kam hone ka matlab hamesha price kam hona nahi hai!
+                    </p>
+                    <p class="text-lg text-red-200">Low GST ≠ Hamesha Sasta ⚠️ Alert Raho!</p>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gray-800 p-6 rounded-lg inline-block">
+                        <div class="flex items-center justify-center space-x-8">
+                            <div class="text-center">
+                                <div class="price-arrow text-green-400 text-4xl mb-2">↓</div>
+                                <p class="text-green-400 font-bold">GST Down</p>
+                            </div>
+                            <div class="text-6xl">💰</div>
+                            <div class="text-center">
+                                <div class="price-arrow text-red-400 text-4xl mb-2"
+                                    style="animation-direction: reverse;">↑</div>
+                                <p class="text-red-400 font-bold">MRP Up?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECAP (40-45s) -->
+        <section id="recap" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-6xl mx-auto text-center">
+                <h3
+                    class="text-4xl md:text-6xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                    22 SEPT KE BAAD KI WISHLIST ✅
+                </h3>
+
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
+                    <div class="montage-item bg-gradient-to-br from-blue-500 to-cyan-500 p-6 rounded-xl shadow-xl">
+                        <div class="text-4xl mb-2">🧴</div>
+                        <p class="text-white font-bold">Toiletries</p>
+                        <p class="text-blue-100 text-sm">18% → 5%</p>
+                    </div>
+
+                    <div class="montage-item bg-gradient-to-br from-green-500 to-emerald-500 p-6 rounded-xl shadow-xl">
+                        <div class="text-4xl mb-2">🍫</div>
+                        <p class="text-white font-bold">Snacks</p>
+                        <p class="text-green-100 text-sm">12-18% → 5%</p>
+                    </div>
+
+                    <div class="montage-item bg-gradient-to-br from-indigo-500 to-purple-500 p-6 rounded-xl shadow-xl">
+                        <div class="text-4xl mb-2">🏍️</div>
+                        <p class="text-white font-bold">Vehicles</p>
+                        <p class="text-indigo-100 text-sm">28% → 18%</p>
+                    </div>
+
+                    <div class="montage-item bg-gradient-to-br from-teal-500 to-cyan-500 p-6 rounded-xl shadow-xl">
+                        <div class="text-4xl mb-2">📺</div>
+                        <p class="text-white font-bold">Electronics</p>
+                        <p class="text-teal-100 text-sm">28% → 18%</p>
+                    </div>
+
+                    <div class="montage-item bg-gradient-to-br from-pink-500 to-rose-500 p-6 rounded-xl shadow-xl">
+                        <div class="text-4xl mb-2">🧘‍♀️</div>
+                        <p class="text-white font-bold">Lifestyle</p>
+                        <p class="text-pink-100 text-sm">18% → 5%</p>
+                    </div>
+                </div>
+
+                <p class="text-xl text-gray-300">22nd September tak wait karo!</p>
+            </div>
+        </section>
+
+        <!-- CTA Section (45-60s) -->
+        <section id="cta" class="min-h-screen flex items-center justify-center px-6 section-transition">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3
+                    class="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+                    Tumhari Pick Kya Hai? 🤔
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div
+                        class="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl shadow-xl cta-button cursor-pointer">
+                        <div class="text-4xl mb-4">🧴</div>
+                        <p class="text-xl font-bold text-white">New Face Wash</p>
+                        <p class="text-purple-100">Toiletries ki taraf?</p>
+                    </div>
+
+                    <div
+                        class="bg-gradient-to-br from-blue-600 to-indigo-600 p-6 rounded-xl shadow-xl cta-button cursor-pointer">
+                        <div class="text-4xl mb-4">🏍️</div>
+                        <p class="text-xl font-bold text-white">Nayi Scooter</p>
+                        <p class="text-blue-100">Ride ki taraf?</p>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <p class="text-xl text-gray-300 mb-4">Sabse Badi Saving Kahan? 👇</p>
+                    <div class="bg-gray-800 p-4 rounded-lg inline-block">
+                        <p class="text-gray-300">Comment mein batao!</p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <button
+                        class="cta-button bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-full text-xl shadow-xl">
+                        <i class="fas fa-heart mr-2"></i>
+                        Follow @smart.moneyx for more 🚀
+                    </button>
+
+                    <!-- Confetti Animation -->
+                    <div id="confetti-container" class="absolute inset-0 pointer-events-none overflow-hidden">
+                        <div class="confetti absolute text-yellow-400 text-2xl">🎉</div>
+                        <div class="confetti absolute text-blue-400 text-2xl" style="left: 20%; animation-delay: 0.2s;">
+                            ⭐</div>
+                        <div class="confetti absolute text-pink-400 text-2xl" style="left: 40%; animation-delay: 0.4s;">
+                            💫</div>
+                        <div class="confetti absolute text-green-400 text-2xl"
+                            style="left: 60%; animation-delay: 0.6s;">✨</div>
+                        <div class="confetti absolute text-purple-400 text-2xl"
+                            style="left: 80%; animation-delay: 0.8s;">🎊</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            // GSAP ScrollTrigger for section animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate sections on scroll
+            gsap.utils.toArray('.section-transition').forEach(section => {
+                gsap.to(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleClass: "section-active"
+                    }
+                });
+            });
+
+            // Progress bar animation
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.offsetHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                document.getElementById('progress-bar').style.width = scrollPercent + '%';
+            });
+
+            // Chart.js configurations
+            const chartConfig = {
+                type: 'bar',
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            top: 20,
+                            bottom: 20,
+                            left: 10,
+                            right: 10
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 30,
+                            grid: {
+                                color: 'rgba(255, 255, 255, 0.1)',
+                                borderColor: 'rgba(255, 255, 255, 0.2)',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                padding: 15,
+                                callback: function (value) {
+                                    return value + '%';
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'GST Rate',
+                                color: '#ffffff',
+                                font: {
+                                    size: 16,
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                padding: 10
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            enabled: true,
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                            titleColor: '#ffffff',
+                            bodyColor: '#ffffff',
+                            borderColor: 'rgba(255, 255, 255, 0.2)',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            displayColors: false,
+                            callbacks: {
+                                title: function (context) {
+                                    return 'GST Rate Change';
+                                },
+                                label: function (context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed.y;
+                                    return `${label}: ${value}% GST`;
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart',
+                        delay: function (context) {
+                            return context.dataIndex * 300;
+                        }
+                    },
+                    elements: {
+                        bar: {
+                            borderRadius: 8,
+                            borderSkipped: false,
+                        }
+                    }
+                }
+            };
+
+            // Toiletries Chart (18% → 5%)
+            new Chart(document.getElementById('toiletriesChart'), {
+                ...chartConfig,
+                data: {
+                    labels: ['Before GST', 'After GST'],
+                    datasets: [{
+                        label: 'GST Rate',
+                        data: [18, 5],
+                        backgroundColor: ['#ef4444', '#10b981'],
+                        borderColor: ['#dc2626', '#059669'],
+                        borderWidth: 3,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        barThickness: 80,
+                        hoverBackgroundColor: ['#f87171', '#34d399'],
+                        hoverBorderColor: ['#ef4444', '#10b981']
+                    }]
+                }
+            });
+
+            // Snacks Chart (12-18% → 5%)
+            new Chart(document.getElementById('snacksChart'), {
+                ...chartConfig,
+                data: {
+                    labels: ['Before GST', 'After GST'],
+                    datasets: [{
+                        label: 'GST Rate',
+                        data: [15, 5], // Average of 12-18%
+                        backgroundColor: ['#ef4444', '#10b981'],
+                        borderColor: ['#dc2626', '#059669'],
+                        borderWidth: 3,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        barThickness: 80,
+                        hoverBackgroundColor: ['#f87171', '#34d399'],
+                        hoverBorderColor: ['#ef4444', '#10b981']
+                    }]
+                }
+            });
+
+            // Staples Chart (0% GST)
+            new Chart(document.getElementById('staplesChart'), {
+                ...chartConfig,
+                data: {
+                    labels: ['Before GST', 'After GST'],
+                    datasets: [{
+                        label: 'GST Rate',
+                        data: [5, 0], // Assuming previous GST was around 5%
+                        backgroundColor: ['#ef4444', '#22c55e'],
+                        borderColor: ['#dc2626', '#16a34a'],
+                        borderWidth: 3,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        barThickness: 80,
+                        hoverBackgroundColor: ['#f87171', '#4ade80'],
+                        hoverBorderColor: ['#ef4444', '#22c55e']
+                    }]
+                }
+            });
+
+            // Ride Chart (28% → 18%)
+            new Chart(document.getElementById('rideChart'), {
+                ...chartConfig,
+                data: {
+                    labels: ['Before GST', 'After GST'],
+                    datasets: [{
+                        label: 'GST Rate',
+                        data: [28, 18],
+                        backgroundColor: ['#ef4444', '#10b981'],
+                        borderColor: ['#dc2626', '#059669'],
+                        borderWidth: 3,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        barThickness: 80,
+                        hoverBackgroundColor: ['#f87171', '#34d399'],
+                        hoverBorderColor: ['#ef4444', '#10b981']
+                    }]
+                }
+            });
+
+            // Electronics Chart (28% → 18%)
+            new Chart(document.getElementById('electronicsChart'), {
+                ...chartConfig,
+                data: {
+                    labels: ['Before GST', 'After GST'],
+                    datasets: [{
+                        label: 'GST Rate',
+                        data: [28, 18],
+                        backgroundColor: ['#ef4444', '#10b981'],
+                        borderColor: ['#dc2626', '#059669'],
+                        borderWidth: 3,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        barThickness: 80,
+                        hoverBackgroundColor: ['#f87171', '#34d399'],
+                        hoverBorderColor: ['#ef4444', '#10b981']
+                    }]
+                }
+            });
+
+            // Lifestyle Chart (18% → 5%)
+            new Chart(document.getElementById('lifestyleChart'), {
+                ...chartConfig,
+                data: {
+                    labels: ['Before GST', 'After GST'],
+                    datasets: [{
+                        label: 'GST Rate',
+                        data: [18, 5],
+                        backgroundColor: ['#ef4444', '#10b981'],
+                        borderColor: ['#dc2626', '#059669'],
+                        borderWidth: 3,
+                        borderRadius: 12,
+                        borderSkipped: false,
+                        barThickness: 80,
+                        hoverBackgroundColor: ['#f87171', '#34d399'],
+                        hoverBorderColor: ['#ef4444', '#10b981']
+                    }]
+                }
+            });
+
+            // CTA Button interaction
+            document.querySelector('.cta-button').addEventListener('click', () => {
+                const confetti = document.getElementById('confetti-container');
+                confetti.style.display = 'block';
+
+                setTimeout(() => {
+                    confetti.style.display = 'none';
+                }, 2000);
+            });
+
+            // Smooth scrolling for navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

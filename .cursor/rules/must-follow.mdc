@@ -1,27 +1,26 @@
 ---
- alwaysApply: true 
+alwaysApply: true
 ---
 
-* I will provide a **reel script** (the narration I’ll speak while sharing the screen).
-* You need to generate an **`index.html` file** inside a folder, based on the given topic.
-* In the **`index.html`**, we will use:
+- I will provide a **reel script** (the narration I’ll speak while sharing the screen).
+- You need to generate an **`index.html` file** inside a folder, based on the given topic.
+- In the **`index.html`**, we will use:
+  - **Tailwind CSS** for styling
+  - **AOS** for animations
+  - **Chart.js** for charts
+- The page should feel like a **modern presentation (PPT style)**, with multiple sections.
+- Theme: **Dark mode with a clean, professional look.**
+- Each section should:
 
-  * **Tailwind CSS** for styling
-  * **GSAP** for animations
-  * **Chart.js** for charts
-  * **ReactBits code snippets** where applicable
-* The page should feel like a **modern presentation (PPT style)**, with multiple sections.
-* Theme: **Dark mode with a clean, professional look.**
-* Each section should:
+  - Represent roughly **5 seconds** of the script (one section per \~5s narration).
+  - Be visually engaging, with smooth AOS animations.
+  - Include **charts** wherever relevant, styled nicely with Chart.js. make sure its proper and to show comparision choose proper chart: bar, line, pie, doughnot, etc
 
-  * Represent roughly **5 seconds** of the script (one section per \~5s narration).
-  * Be visually engaging, with smooth GSAP animations.
-  * Include **charts** wherever relevant, styled nicely with Chart.js.
-* Overall requirements:
+- Overall requirements:
 
-  * Sections must be **well-structured and modern looking**.
-  * UX should be **smooth, professional, and easy to follow**.
-  * Tailwind should be used consistently for all styling.
+  - Sections must be **well-structured and modern looking**.
+  - UX should be **smooth, professional, and easy to follow**.
+  - Tailwind should be used consistently for all styling.
 
 ---
 
