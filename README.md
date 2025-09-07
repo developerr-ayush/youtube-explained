@@ -70,6 +70,7 @@ youtube-explained/
 2. **Open any `index.html` file** in your browser
 3. **Scroll through** the presentation sections
 4. **Use full-screen mode** for better recording quality
+5. i am already using live server for this
 
 ## 🛠️ Technical Details
 
