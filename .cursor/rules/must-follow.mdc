@@ -1,171 +1,28 @@
 ---
-description: Cursor Rules for Smart.MoneyX Interactive Finance Presentations
-globs:
-alwaysApply: true
+ alwaysApply: true 
 ---
 
-# 🎬 Cursor Rules — Smart.MoneyX Finance Channel
+* I will provide a **reel script** (the narration I’ll speak while sharing the screen).
+* You need to generate an **`index.html` file** inside a folder, based on the given topic.
+* In the **`index.html`**, we will use:
 
-## 🎯 Purpose
+  * **Tailwind CSS** for styling
+  * **GSAP** for animations
+  * **Chart.js** for charts
+  * **ReactBits code snippets** where applicable
+* The page should feel like a **modern presentation (PPT style)**, with multiple sections.
+* Theme: **Dark mode with a clean, professional look.**
+* Each section should:
 
-These rules ensure **consistent, high-quality, YouTube-Explained style** presentations (scroll-based, modern, finance-focused).
-Think: **clear info + engaging visuals + smooth storytelling.**
-i will provide you all information and you have to create a new webpage which has all the information in such way which mentioned below
+  * Represent roughly **5 seconds** of the script (one section per \~5s narration).
+  * Be visually engaging, with smooth GSAP animations.
+  * Include **charts** wherever relevant, styled nicely with Chart.js.
+* Overall requirements:
 
----
-
-## 🛠️ Tech Stack
-
-- **Tailwind CSS** → Styling
-- **Chart.js** → Charts & data viz
-- **Google Fonts (Inter)** → Clean modern typography
-
-### CDN Includes
-
-```html
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<link
-  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
-  rel="stylesheet"
-/>
-```
+  * Sections must be **well-structured and modern looking**.
+  * UX should be **smooth, professional, and easy to follow**.
+  * Tailwind should be used consistently for all styling.
 
 ---
 
-## 🎨 Design System
-
-### Colors
-
-- **Backgrounds** → `bg-black` (main), `bg-gray-900` (sections)
-- **Text** → `text-gray-300` (primary), `text-gray-400` (secondary), `text-gray-500` (muted)
-- **Accents (max 2 per section)**
-
-  - Cyan → Standard / info
-  - Fuchsia → Premium / highlights
-  - Rose → Warnings / costly
-  - Green → Benefits / savings
-  - Purple → Dates / implementation
-
-### Gradients
-
-- Hero → radial cyan+fuchsia glow
-- CTA → cyan → black radial fade
-
----
-
-## 📐 Layout & Structure
-
-### Global Layout
-
-```html
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <body class="bg-black">
-    <!-- Fixed nav (home/back) -->
-    <div class="scroll-container">
-      <!-- Full-screen scroll-snap sections -->
-    </div>
-    <!-- Footer (optional) -->
-  </body>
-</html>
-```
-
-### Section Types
-
-1. **Hero** → Emoji, gradient headline, subtitle and maybe description
-2. **Overview** → Gradient heading + simple highlight text
-3. **Data Table** → Scrollable, hover rows, color-coded columns
-4. **Benefits** → ✅ Grid of 4–6 key benefits in different sections or table or charts
-5. **CTA** → Follow for more
-**Note this is not hard and fast rule but you can use it
-
----
-
-## 🎭 Animations & Interactions
-
-- **Scroll Snap** → Each section full screen
-- **Fade-In** → Subtle upward fade for content
-- **Hover Effects** → Light gray background highlights on table rows
-
----
-
-## 📝 Content Guidelines
-
-- Keep it **clear, simple, and scannable**
-- Use **emojis sparingly** for interest (✅, ⚠️, 📊, 📺)
-- Section length → **1 screen each** (no overcrowding)
-- Flow → **Hook → Context -> Explain → Benefits → Action**
-
----
-
-## 🔧 Dev Rules
-
-- Use **semantic HTML5** & **Tailwind utilities**
-- Keep spacing consistent (`mb-4, mb-6, mb-8, mb-12`)
-- **Mobile-first** → Always test responsive behavior
-- Optimize for **performance** → minimal CSS, CDN libraries
-- Ensure **contrast & accessibility**
-
----
-
-## 🎨 Visual Hierarchy
-
-- Hero → `text-6xl md:text-[7rem]`
-- Section Headers → `text-3xl md:text-5xl`
-- Subheaders → `text-xl md:text-2xl`
-- Body → `text-base md:text-lg`
-- Small → `text-sm md:text-base`
-
----
-
-## 🚀 Deployment Checklist
-
-✅ Cross-browser test
-✅ Mobile responsive
-✅ HTML validated
-✅ Links + scroll tested
-✅ Fast load speed
-✅ Strong call-to-action
-
----
-
-## 📂 File Organization
-
-```
-project/
-├── index.html   # Main presentation
-├── .cursorrules # This file
-├── assets/      # Images, icons
-└── tools/       # Utility scripts
-```
-
-- **File names** → kebab-case (`gst-2-0.html`)
-- **Custom CSS classes** → kebab-case
-- **JS IDs** → camelCase
-- **Images** → descriptive-hyphenated names
-
----
-
-## 🎯 Best Practices
-
-1. One **main message per section**
-2. Keep visuals **consistent** with brand palette
-3. Always **optimize for mobile**
-4. Accessibility first → readable fonts, contrast
-5. SEO ready → meta tags, clean HTML
-
----
-
-## 🔄 Maintenance
-
-- Update palette when new theme needed
-- Add new sections only if they follow templates
-- Regularly test **performance & scroll UX**
-- Keep docs **in sync with changes**
-
----
-
-✨ **Reminder**: Smart.MoneyX = **Finance made engaging.** Every slide should **teach clearly, look premium, and hook viewers to follow.**
-
----
+Do you want me to rewrite this in a **super concise checklist format** (like developer-ready steps), or keep it as a structured guideline (like above)?
